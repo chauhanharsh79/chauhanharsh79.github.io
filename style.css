@@ -21,6 +21,7 @@ a {
   padding: 0 20px;
 }
 
+/* HEADER */
 .header {
   background: #0b1c2d;
   color: #fff;
@@ -43,6 +44,7 @@ nav a {
   font-size: 14px;
 }
 
+/* HERO */
 .hero {
   background: linear-gradient(135deg, #0b1c2d, #122f4a);
   color: #fff;
@@ -68,6 +70,7 @@ nav a {
   gap: 15px;
 }
 
+/* BUTTONS */
 .btn {
   background: #1f8ef1;
   color: #fff;
@@ -85,6 +88,7 @@ nav a {
   border: 1px solid #fff;
 }
 
+/* SECTIONS */
 .section {
   padding: 70px 0;
 }
@@ -112,6 +116,7 @@ nav a {
   margin-top: 15px;
 }
 
+/* GRIDS */
 .grid-3, .grid-4 {
   display: grid;
   gap: 20px;
@@ -125,17 +130,24 @@ nav a {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
+/* CARDS */
 .card {
   background: #fff;
   padding: 25px;
   border-radius: 6px;
   text-align: center;
+  font-size: 16px;
+}
+
+.card::first-letter {
+  font-size: 22px;
 }
 
 .section.dark .card {
   background: #122f4a;
 }
 
+/* FEATURES */
 .features {
   max-width: 600px;
   margin: auto;
@@ -155,42 +167,12 @@ nav a {
   color: #1f8ef1;
 }
 
+/* HOW IT WORKS */
 .step {
+  position: relative;
   text-align: center;
+  padding-right: 40px;
 }
-
-.grid-4 {
-  position: relative;
-}
-
-.step {
-  position: relative;
-  padding-right: 30px;
-}
-
-.step::after {
-  content: "→";
-  position: absolute;
-  right: -18px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: #1f8ef1;
-  font-weight: 600;
-}
-
-.grid-4 .step:last-child::after {
-  content: "";
-}
-
-/* Hide arrows on mobile */
-@media (max-width: 768px) {
-  .step::after {
-    display: none;
-  }
-}
-
-
 
 .step span {
   display: inline-block;
@@ -203,12 +185,35 @@ nav a {
   margin-bottom: 10px;
 }
 
+/* Number-to-number arrows */
+.step::after {
+  content: "→";
+  position: absolute;
+  right: -22px;
+  top: 28px;
+  font-size: 24px;
+  color: #1f8ef1;
+  font-weight: 600;
+}
+
+.grid-4 .step:last-child::after {
+  content: "";
+}
+
+@media (max-width: 768px) {
+  .step::after {
+    display: none;
+  }
+}
+
+/* CONTACT */
 .contact-box {
   max-width: 400px;
   margin: 30px auto 0;
   text-align: center;
 }
 
+/* FOOTER */
 .footer {
   background: #0b1c2d;
   color: #aaa;
