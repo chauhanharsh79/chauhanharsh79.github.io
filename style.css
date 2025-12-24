@@ -165,15 +165,18 @@ nav a {
 
 .step {
   position: relative;
+  padding-right: 30px;
 }
 
 .step::after {
   content: "→";
   position: absolute;
-  right: -20px;
-  top: 35%;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 24px;
   color: #1f8ef1;
+  font-weight: 600;
 }
 
 .grid-4 .step:last-child::after {
@@ -186,6 +189,7 @@ nav a {
     display: none;
   }
 }
+
 
 
 .step span {
