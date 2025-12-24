@@ -34,9 +34,23 @@ a {
   align-items: center;
 }
 
+/* LOGO */
 .logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-main {
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
+}
+
+.logo-sub {
+  font-size: 11px;
+  opacity: 0.7;
+  letter-spacing: 0.8px;
 }
 
 nav a {
