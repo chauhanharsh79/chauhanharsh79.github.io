@@ -125,11 +125,6 @@ nav a {
   text-align: center;
 }
 
-.subtle {
-  opacity: 0.7;
-  margin-top: 15px;
-}
-
 /* GRIDS */
 .grid-3, .grid-4 {
   display: grid;
@@ -153,14 +148,6 @@ nav a {
   font-size: 16px;
 }
 
-.card::first-letter {
-  font-size: 22px;
-}
-
-.section.dark .card {
-  background: #122f4a;
-}
-
 /* FEATURES */
 .features {
   max-width: 600px;
@@ -181,41 +168,43 @@ nav a {
   color: #1f8ef1;
 }
 
-/* HOW IT WORKS */
+/* HOW IT WORKS – PROFESSIONAL */
+.process {
+  position: relative;
+}
+
+.process::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: #dbe3ea;
+  z-index: 0;
+}
+
 .step {
   position: relative;
   text-align: center;
-  padding-right: 40px;
+  z-index: 1;
 }
 
 .step span {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   background: #1f8ef1;
   color: #fff;
   border-radius: 50%;
-  line-height: 40px;
-  margin-bottom: 10px;
-}
-
-/* Number-to-number arrows */
-.step::after {
-  content: "→";
-  position: absolute;
-  right: -22px;
-  top: 28px;
-  font-size: 24px;
-  color: #1f8ef1;
   font-weight: 600;
-}
-
-.grid-4 .step:last-child::after {
-  content: "";
+  margin-bottom: 12px;
 }
 
 @media (max-width: 768px) {
-  .step::after {
+  .process::before {
     display: none;
   }
 }
