@@ -159,6 +159,35 @@ nav a {
   text-align: center;
 }
 
+.grid-4 {
+  position: relative;
+}
+
+.step {
+  position: relative;
+}
+
+.step::after {
+  content: "→";
+  position: absolute;
+  right: -20px;
+  top: 35%;
+  font-size: 24px;
+  color: #1f8ef1;
+}
+
+.grid-4 .step:last-child::after {
+  content: "";
+}
+
+/* Hide arrows on mobile */
+@media (max-width: 768px) {
+  .step::after {
+    display: none;
+  }
+}
+
+
 .step span {
   display: inline-block;
   width: 40px;
@@ -188,31 +217,3 @@ nav a {
   font-size: 11px;
   opacity: 0.7;
 }
-.grid-4 {
-  position: relative;
-}
-
-.step {
-  position: relative;
-}
-
-.step::after {
-  content: "→";
-  position: absolute;
-  right: -20px;
-  top: 35%;
-  font-size: 24px;
-  color: #1f8ef1;
-}
-
-.grid-4 .step:last-child::after {
-  content: "";
-}
-
-/* Hide arrows on mobile */
-@media (max-width: 768px) {
-  .step::after {
-    display: none;
-  }
-}
-
