@@ -15,7 +15,7 @@ padding:0 20px;
 .header{
 background:#0b1c2d;
 color:white;
-padding:15px 0;
+padding:14px 0;
 }
 
 .nav-flex{
@@ -30,10 +30,31 @@ color:white;
 text-decoration:none;
 }
 
+/* ===============================
+   LOGO STYLING
+================================ */
+
+.logo{
+display:flex;
+flex-direction:column;
+line-height:1.05;
+}
+
+.logo-main{
+font-size:20px;
+font-weight:700;
+letter-spacing:2px;
+font-family: "Segoe UI", Arial, sans-serif;
+}
+
 .logo-sub{
 font-size:11px;
-opacity:.7;
+letter-spacing:1.2px;
+opacity:.75;
+margin-top:2px;
+text-transform:uppercase;
 }
+
 
 /* HERO */
 
