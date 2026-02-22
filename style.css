@@ -12,11 +12,9 @@ padding:0 20px;
 
 /* HEADER */
 
-.header{
-  height: 90px;
-  padding: 18px 40px;
-  background: #071c2c;
-  display: flex;
+header {
+  height: 72px;
+  padding: 0 40px;
   align-items: center;
 }
 
@@ -34,16 +32,23 @@ padding:0 20px;
    LOGO (CRISP ORIGINAL STYLE)
 ================================ */
 
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
 .logo-title {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 22px;   /* KEY FIX */
+  font-weight: 600;
+  letter-spacing: 1.5px;
 }
 
 .logo-subtitle {
-  font-size: 13px;
-  opacity: 0.8;
+  font-size: 12px;
+  opacity: 0.75;
   margin-top: 2px;
+  letter-spacing: 0.8px;
 }
 
 
