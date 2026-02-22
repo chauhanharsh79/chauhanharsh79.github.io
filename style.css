@@ -13,21 +13,17 @@ padding:0 20px;
 /* HEADER */
 
 .header{
-background:#0b1c2d;
-color:white;
-padding:14px 0;
+  height: 90px;
+  padding: 18px 40px;
+  background: #071c2c;
+  display: flex;
+  align-items: center;
 }
 
-.nav-flex{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-nav a{
-margin-left:20px;
-color:white;
-text-decoration:none;
+.nav-menu a {
+  margin-left: 28px;
+  font-size: 15px;
+  opacity: 0.9;
 }
 
 /* ===============================
@@ -38,24 +34,17 @@ text-decoration:none;
    LOGO (CRISP ORIGINAL STYLE)
 ================================ */
 
-.logo{
-display:flex;
-flex-direction:column;
-line-height:1.1;
-}
 .logo-title {
-  font-size: 42px;
+  font-size: 28px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .logo-subtitle {
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  opacity: 0.85;
+  font-size: 13px;
+  opacity: 0.8;
+  margin-top: 2px;
 }
-
 
 
 /* HERO */
