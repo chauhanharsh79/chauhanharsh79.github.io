@@ -5,272 +5,656 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Parvekshak | Smart AI Surveillance</title>
   <meta name="description" content="Parvekshak is a local AI-powered surveillance system that adds intelligence to CCTV cameras. No cloud. No internet. Privacy-first."/>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-  
 <!-- ================= HEADER ================= -->
 <header class="header">
-<div class="container">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="13" stroke="#1f8ef1" stroke-width="1.5"/>
+          <circle cx="14" cy="14" r="7" stroke="#1f8ef1" stroke-width="1.5"/>
+          <circle cx="14" cy="14" r="2.5" fill="#1f8ef1"/>
+          <line x1="14" y1="1" x2="14" y2="5" stroke="#1f8ef1" stroke-width="1.5"/>
+          <line x1="14" y1="23" x2="14" y2="27" stroke="#1f8ef1" stroke-width="1.5"/>
+          <line x1="1" y1="14" x2="5" y2="14" stroke="#1f8ef1" stroke-width="1.5"/>
+          <line x1="23" y1="14" x2="27" y2="14" stroke="#1f8ef1" stroke-width="1.5"/>
+        </svg>
+      </span>
+      <div class="logo-text">
+        <span class="logo-main">PARVEKSHAK</span>
+        <span class="logo-sub">AI Surveillance</span>
+      </div>
+    </div>
 
-<div class="logo">
-<span class="logo-main">PARVEKSHAK</span>
-<span class="logo-sub">AI Surveillance</span>
-</div>
-
-<nav>
-<a href="#how">How It Works</a>
-<a href="#applications">Industrial Applications</a>
-<a href="#installers">Integrators</a>
-<a href="#contact" class="btn small">Contact</a>
-</nav>
-
-</div>
+    <nav>
+      <a href="#how">How It Works</a>
+      <a href="#applications">Applications</a>
+      <a href="#installers">Integrators</a>
+      <a href="#contact" class="btn small">Contact Us</a>
+    </nav>
+  </div>
 </header>
-  
-
-
 
 <!-- ================= HERO ================= -->
 <section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="hero-tag">Industrial Vision Intelligence</div>
+      <h1>
+        Smart Factories<br>
+        <span class="accent-line">Demand Smarter</span><br>
+        Surveillance
+      </h1>
+      <p>
+        Parvekshak transforms existing industrial CCTV infrastructure into an
+        intelligent monitoring platform delivering real-time safety,
+        security and operational visibility — entirely on-site, no cloud required.
+      </p>
+      <div class="actions">
+        <a href="#contact" class="btn">Talk to Us</a>
+        <a href="#how" class="btn-ghost">See How It Works</a>
+      </div>
+      <div class="industries-row">
+        <span>Manufacturing</span>
+        <span class="sep">·</span>
+        <span>Warehousing</span>
+        <span class="sep">·</span>
+        <span>Infrastructure</span>
+        <span class="sep">·</span>
+        <span>Industrial</span>
+      </div>
+    </div>
 
-<div class="container hero-grid">
-
-<div class="hero-text">
-
-<h1>
-Industrial Vision Intelligence for Smart Factories
-</h1>
-
-<p>
-Parvekshak transforms existing industrial CCTV infrastructure into an
-intelligent monitoring platform delivering real-time safety,
-security and operational visibility — entirely on-site without
-cloud dependency.
-</p>
-<br>
-<div class="actions">
-<a href="#contact" class="btn">Talk to Us</a>
-</div>
-<br>
- 
-<p class="subtle">
-Manufacturing • Warehousing • Infrastructure • Industrial Premises
-</p>
-
-</div>
-
-<div class="hero-carousel">
-<div class="carousel-track">
-<img src="gun-alert1.jpeg">
-<img src="machine-unattanded.jpeg">
-</div>
-</div>
-
-</div>
+    <div class="hero-carousel-wrap">
+      <div class="carousel-frame">
+        <div class="carousel-badge">
+          <span class="badge-dot"></span>
+          <span>Live AI Analysis</span>
+        </div>
+        <div class="hero-carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="gun-alert1.jpeg" alt="Security Alert Detection" onerror="this.style.display='none'">
+              <div class="slide-fallback">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                  <rect x="8" y="16" width="48" height="36" rx="3" stroke="#1f8ef1" stroke-width="2"/>
+                  <circle cx="32" cy="34" r="10" stroke="#1f8ef1" stroke-width="2"/>
+                  <circle cx="32" cy="34" r="4" fill="#1f8ef1" opacity="0.4"/>
+                  <rect x="26" y="12" width="12" height="6" rx="1" stroke="#1f8ef1" stroke-width="2"/>
+                  <line x1="16" y1="20" x2="20" y2="24" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <line x1="48" y1="20" x2="44" y2="24" stroke="#1f8ef1" stroke-width="1.5"/>
+                </svg>
+                <p>Security Alert Detection</p>
+              </div>
+              <div class="slide-label">Threat Detection</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="machine-unattanded.jpeg" alt="Machine Monitoring" onerror="this.style.display='none'">
+              <div class="slide-fallback">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                  <rect x="12" y="20" width="40" height="28" rx="2" stroke="#1f8ef1" stroke-width="2"/>
+                  <rect x="20" y="28" width="10" height="12" rx="1" stroke="#1f8ef1" stroke-width="2"/>
+                  <rect x="34" y="28" width="10" height="12" rx="1" stroke="#1f8ef1" stroke-width="2"/>
+                  <path d="M24 20V16M40 20V16" stroke="#1f8ef1" stroke-width="2"/>
+                  <circle cx="52" cy="16" r="6" fill="#ff4444" opacity="0.8"/>
+                  <line x1="50" y1="14" x2="54" y2="18" stroke="white" stroke-width="1.5"/>
+                  <line x1="54" y1="14" x2="50" y2="18" stroke="white" stroke-width="1.5"/>
+                </svg>
+                <p>Unattended Machine Alert</p>
+              </div>
+              <div class="slide-label">Machine Monitoring</div>
+            </div>
+            <div class="carousel-slide no-img">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <path d="M32 12L52 24V40L32 52L12 40V24L32 12Z" stroke="#1f8ef1" stroke-width="2"/>
+                <circle cx="32" cy="32" r="8" stroke="#1f8ef1" stroke-width="2"/>
+                <line x1="32" y1="12" x2="32" y2="20" stroke="#1f8ef1" stroke-width="1.5" stroke-dasharray="2 2"/>
+                <line x1="32" y1="44" x2="32" y2="52" stroke="#1f8ef1" stroke-width="1.5" stroke-dasharray="2 2"/>
+              </svg>
+              <p>Perimeter Intrusion Detection</p>
+              <div class="slide-label">Perimeter Security</div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots">
+          <button class="dot active" data-idx="0"></button>
+          <button class="dot" data-idx="1"></button>
+          <button class="dot" data-idx="2"></button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <!-- ================= TRUST BAND ================= -->
 <section class="trust-band">
-<div class="container trust-flex">
-<span>Manufacturing Plants</span>
-<span>Warehouses</span>
-<span>Industrial Facilities</span>
-<span>Infrastructure Sites</span>
-<span>Commercial Premises</span>
-</div>
+  <div class="container trust-flex">
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Manufacturing Plants
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Warehouses
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Industrial Facilities
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Infrastructure Sites
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Commercial Premises
+    </div>
+  </div>
 </section>
-
 
 <!-- ================= PROBLEMS ================= -->
 <section class="section light">
-<div class="container grid-3">
-
-<div class="card">
-<h3>Manual Monitoring</h3>
-<p>CCTV systems require continuous supervision.</p>
-</div>
-
-<div class="card">
-<h3>Delayed Incident Response</h3>
-<p>Incidents are detected only after operational loss.</p>
-</div>
-
-<div class="card">
-<h3>Operational Blind Spots</h3>
-<p>Critical industrial zones remain unattended.</p>
-</div>
-
-</div>
+  <div class="container">
+    <div class="section-label">The Problem</div>
+    <h2>Challenges with Traditional CCTV</h2>
+    <div class="grid-3">
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="13" stroke="#1f8ef1" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <circle cx="16" cy="16" r="6" stroke="#1f8ef1" stroke-width="1.5"/>
+            <line x1="16" y1="10" x2="16" y2="16" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="16" cy="18" r="1.5" fill="#1f8ef1"/>
+          </svg>
+        </div>
+        <h3>Manual Monitoring</h3>
+        <p>CCTV systems require continuous human supervision, creating fatigue and attention gaps that miss critical events.</p>
+      </div>
+      <div class="problem-card featured">
+        <div class="problem-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4L28 26H4L16 4Z" stroke="#1f8ef1" stroke-width="1.5"/>
+            <line x1="16" y1="14" x2="16" y2="20" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="16" cy="23" r="1.5" fill="#1f8ef1"/>
+          </svg>
+        </div>
+        <h3>Delayed Incident Response</h3>
+        <p>Incidents are detected only after the fact, resulting in operational loss and unrecoverable damage.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="4" width="10" height="10" rx="1" stroke="#1f8ef1" stroke-width="1.5"/>
+            <rect x="18" y="4" width="10" height="10" rx="1" stroke="#1f8ef1" stroke-width="1.5" stroke-dasharray="2 2"/>
+            <rect x="4" y="18" width="10" height="10" rx="1" stroke="#1f8ef1" stroke-width="1.5" stroke-dasharray="2 2"/>
+            <rect x="18" y="18" width="10" height="10" rx="1" stroke="#1f8ef1" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3>Operational Blind Spots</h3>
+        <p>Critical industrial zones remain effectively unmonitored due to limited human attention capacity.</p>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <!-- ================= WHAT ================= -->
-<section class="section">
-<div class="container">
-
-<h2>What is Parvekshak?</h2>
-
-<p class="center">
-Parvekshak is an AI-powered industrial vision intelligence layer
-that enhances existing CCTV deployments with real-time analysis.
-</p>
-
-<p class="center subtle">
-Designed for manufacturing plants, warehouses,
-industrial facilities and critical infrastructure.
-</p>
-
-</div>
+<section class="section what-section">
+  <div class="container">
+    <div class="what-grid">
+      <div class="what-text">
+        <div class="section-label">The Solution</div>
+        <h2>What is Parvekshak?</h2>
+        <p>
+          Parvekshak is an AI-powered industrial vision intelligence layer
+          that enhances existing CCTV deployments with real-time analysis —
+          running entirely on your premises, with no cloud dependency.
+        </p>
+        <p class="subtle">
+          Designed for manufacturing plants, warehouses,
+          industrial facilities and critical infrastructure.
+        </p>
+        <div class="what-pills">
+          <span class="pill">On-Premise AI</span>
+          <span class="pill">No Cloud</span>
+          <span class="pill">Real-Time</span>
+          <span class="pill">Privacy-First</span>
+        </div>
+      </div>
+      <div class="what-visual">
+        <div class="scan-box">
+          <div class="scan-ring ring-1"></div>
+          <div class="scan-ring ring-2"></div>
+          <div class="scan-ring ring-3"></div>
+          <div class="scan-center">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="10" stroke="#1f8ef1" stroke-width="2"/>
+              <circle cx="20" cy="20" r="3" fill="#1f8ef1"/>
+              <line x1="20" y1="4" x2="20" y2="10" stroke="#1f8ef1" stroke-width="2"/>
+              <line x1="20" y1="30" x2="20" y2="36" stroke="#1f8ef1" stroke-width="2"/>
+              <line x1="4" y1="20" x2="10" y2="20" stroke="#1f8ef1" stroke-width="2"/>
+              <line x1="30" y1="20" x2="36" y2="20" stroke="#1f8ef1" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="scan-label top-left">Analysing</div>
+          <div class="scan-label top-right">Secure</div>
+          <div class="scan-label bottom-left">On-Premise</div>
+          <div class="scan-label bottom-right">Real-Time</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <!-- ================= HOW ================= -->
 <section id="how" class="section light">
-<div class="container">
-
-<h2>How It Works</h2>
-
-<div class="grid-4 process">
-<div class="step"><span>1</span><p>CCTV connects to Parvekshak</p></div>
-<div class="step"><span>2</span><p>AI processes video locally</p></div>
-<div class="step"><span>3</span><p>Events analysed intelligently</p></div>
-<div class="step"><span>4</span><p>Instant alerts generated</p></div>
-</div>
-
-</div>
+  <div class="container">
+    <div class="section-label">Process</div>
+    <h2>How It Works</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-num">01</div>
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect x="3" y="7" width="22" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="14" cy="15" r="4" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M10 7V5M18 7V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h4>CCTV Connects</h4>
+        <p>Existing cameras integrate directly with Parvekshak — no hardware replacement needed.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">02</div>
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect x="4" y="4" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M8 14h4l2-4 2 8 2-4h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h4>AI Processes Locally</h4>
+        <p>Video is analysed on-site using our AI engine — no data leaves your premises.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">03</div>
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M10 14l3 3 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h4>Events Analysed</h4>
+        <p>Intelligent classification identifies threats, anomalies and operational issues instantly.</p>
+        <div class="step-connector"></div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">04</div>
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14 4v10M14 14l-4-4M14 14l4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 18c0 3.3 3.6 6 8 6s8-2.7 8-6" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+        </div>
+        <h4>Alerts Dispatched</h4>
+        <p>Instant notifications sent to operators the moment a defined event is detected.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- ================= APPLICATIONS ================= -->
+<!-- ================= APPLICATIONS CAROUSEL ================= -->
 <section id="applications" class="section">
-<div class="container">
+  <div class="container">
+    <div class="section-label">Use Cases</div>
+    <h2>Industrial Applications</h2>
 
-<h2>Industrial Applications</h2>
+    <div class="app-carousel-wrap">
+      <button class="app-arrow app-arrow-left" id="appPrev">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
 
-<div class="grid-3">
-<div class="card">Factory & Plant Surveillance</div>
-<div class="card">Industrial Safety Monitoring</div>
-<div class="card">Warehouse Operations</div>
-<div class="card">Critical Zone Monitoring</div>
-<div class="card">Perimeter Intrusion Detection</div>
-<div class="card">Remote Infrastructure Monitoring</div>
-</div>
+      <div class="app-carousel-viewport">
+        <div class="app-carousel-track" id="appTrack">
 
-</div>
+          <div class="app-card">
+            <div class="app-img-wrap">
+              <div class="app-img-placeholder">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect x="4" y="12" width="40" height="28" rx="2" stroke="#1f8ef1" stroke-width="1.8"/>
+                  <path d="M14 28l6-6 4 4 6-8 6 10" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="4" y="8" width="8" height="6" rx="1" stroke="#1f8ef1" stroke-width="1.5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="app-content">
+              <div class="app-tag">Manufacturing</div>
+              <h4>Factory & Plant Surveillance</h4>
+              <p>Continuous AI monitoring of production floors, equipment zones, and access corridors.</p>
+            </div>
+          </div>
+
+          <div class="app-card">
+            <div class="app-img-wrap">
+              <div class="app-img-placeholder">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M24 6L44 20V40H4V20L24 6Z" stroke="#1f8ef1" stroke-width="1.8"/>
+                  <path d="M16 40V28h16v12" stroke="#1f8ef1" stroke-width="1.8"/>
+                  <circle cx="24" cy="18" r="4" stroke="#1f8ef1" stroke-width="1.8"/>
+                  <path d="M20 14l4-4 4 4" stroke="#1f8ef1" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="app-content">
+              <div class="app-tag">Safety</div>
+              <h4>Industrial Safety Monitoring</h4>
+              <p>Detect PPE violations, unsafe behaviours, and hazard proximity in real time.</p>
+            </div>
+          </div>
+
+          <div class="app-card">
+            <div class="app-img-wrap">
+              <div class="app-img-placeholder">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect x="6" y="18" width="36" height="22" rx="2" stroke="#1f8ef1" stroke-width="1.8"/>
+                  <rect x="12" y="26" width="8" height="14" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <rect x="28" y="26" width="8" height="14" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <path d="M6 18L24 8l18 10" stroke="#1f8ef1" stroke-width="1.8"/>
+                  <line x1="20" y1="18" x2="28" y2="18" stroke="#1f8ef1" stroke-width="1.5" stroke-dasharray="2 2"/>
+                </svg>
+              </div>
+            </div>
+            <div class="app-content">
+              <div class="app-tag">Operations</div>
+              <h4>Warehouse Operations</h4>
+              <p>Track movement patterns, inventory handling, and detect unauthorized access to storage zones.</p>
+            </div>
+          </div>
+
+          <div class="app-card">
+            <div class="app-img-wrap">
+              <div class="app-img-placeholder">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="16" stroke="#1f8ef1" stroke-width="1.8"/>
+                  <circle cx="24" cy="24" r="8" stroke="#1f8ef1" stroke-width="1.5" stroke-dasharray="3 2"/>
+                  <circle cx="24" cy="24" r="2.5" fill="#1f8ef1"/>
+                  <path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="app-content">
+              <div class="app-tag">Security</div>
+              <h4>Critical Zone Monitoring</h4>
+              <p>AI-enforced access control for sensitive areas — server rooms, vaults, restricted machinery.</p>
+            </div>
+          </div>
+
+          <div class="app-card">
+            <div class="app-img-wrap">
+              <div class="app-img-placeholder">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect x="4" y="4" width="40" height="40" rx="4" stroke="#1f8ef1" stroke-width="1.8" stroke-dasharray="3 2"/>
+                  <rect x="12" y="12" width="24" height="24" rx="2" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <path d="M18 24h12M24 18v12" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="12" cy="12" r="3" fill="#1f8ef1" opacity="0.6"/>
+                  <circle cx="36" cy="12" r="3" fill="#1f8ef1" opacity="0.6"/>
+                  <circle cx="12" cy="36" r="3" fill="#1f8ef1" opacity="0.6"/>
+                  <circle cx="36" cy="36" r="3" fill="#1f8ef1" opacity="0.6"/>
+                </svg>
+              </div>
+            </div>
+            <div class="app-content">
+              <div class="app-tag">Perimeter</div>
+              <h4>Perimeter Intrusion Detection</h4>
+              <p>Automated boundary monitoring that flags breaches before intruders reach sensitive areas.</p>
+            </div>
+          </div>
+
+          <div class="app-card">
+            <div class="app-img-wrap">
+              <div class="app-img-placeholder">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M8 36l8-12 6 8 6-10 8 14" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 4v40h40" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="38" cy="12" r="6" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <path d="M36 10l4 4M40 10l-4 4" stroke="#ff4444" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="app-content">
+              <div class="app-tag">Remote</div>
+              <h4>Remote Infrastructure Monitoring</h4>
+              <p>Extend intelligent surveillance to remote substations, pipelines, and field sites with local processing.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="app-arrow app-arrow-right" id="appNext">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="app-dots" id="appDots"></div>
+  </div>
 </section>
-
 
 <!-- ================= ROI ================= -->
 <section class="section light">
-<div class="container">
-
-<h2>Operational & Safety Impact</h2>
-
-<div class="roi-grid">
-
-<div class="roi-card">
-<h3>Incident Prevention</h3>
-<p>Detect unsafe situations before escalation.</p>
-</div>
-
-<div class="roi-card">
-<h3>Loss Reduction</h3>
-<p>Prevent intrusion and unauthorized access.</p>
-</div>
-
-<div class="roi-card">
-<h3>Reduced Supervision</h3>
-<p>Automated monitoring lowers manpower dependency.</p>
-</div>
-
-<div class="roi-card">
-<h3>Faster Response</h3>
-<p>Real-time alerts reduce operational downtime.</p>
-</div>
-
-</div>
-
-</div>
+  <div class="container">
+    <div class="section-label">Value</div>
+    <h2>Operational & Safety Impact</h2>
+    <div class="roi-grid">
+      <div class="roi-card">
+        <div class="roi-num">01</div>
+        <h3>Incident Prevention</h3>
+        <p>Detect unsafe situations and anomalies before they escalate into costly incidents.</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-num">02</div>
+        <h3>Loss Reduction</h3>
+        <p>Prevent intrusion, theft, and unauthorized access with persistent AI vigilance.</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-num">03</div>
+        <h3>Reduced Supervision</h3>
+        <p>Automated monitoring substantially lowers manpower dependency for security teams.</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-num">04</div>
+        <h3>Faster Response</h3>
+        <p>Real-time alerts cut incident response windows, reducing operational downtime significantly.</p>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <!-- ================= INSTALLERS ================= -->
 <section id="installers" class="section dark">
-<div class="container">
-
-<h2>Built for System Integrators & Industrial Installers</h2>
-
-<ul class="features">
-<li>Works with existing CCTV deployments</li>
-<li>No recurring cloud dependency</li>
-<li>Industrial-ready deployment</li>
-<li>AI upgrade for installed base</li>
-</ul>
-
-<p class="center subtle">
-Designed to integrate seamlessly with industrial CCTV systems.
-</p>
-
-</div>
+  <div class="container">
+    <div class="installers-grid">
+      <div class="installers-text">
+        <div class="section-label light-label">For Integrators</div>
+        <h2>Built for System Integrators & Industrial Installers</h2>
+        <p>Parvekshak is engineered to extend your existing deployments — not replace them.</p>
+      </div>
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-check">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8l3.5 3.5 6.5-7" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Works with existing CCTV deployments</strong>
+            <p>Compatible with most standard IP camera protocols.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8l3.5 3.5 6.5-7" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <strong>No recurring cloud dependency</strong>
+            <p>All processing occurs on-site — no subscription data costs.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8l3.5 3.5 6.5-7" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Industrial-ready deployment</strong>
+            <p>Hardened for demanding factory and warehouse environments.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8l3.5 3.5 6.5-7" stroke="#1f8ef1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <strong>AI upgrade for installed base</strong>
+            <p>Add intelligence to legacy systems without ripping and replacing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section">
-<div class="container">
-
-<h2>Contact Us</h2>
-
-<div class="contact-box">
-
-<p>
-<strong>Email:</strong>
-<a href="mailto:contact@parvekshak.com">
-contact@parvekshak.com
-</a>
-</p>
-
-<p>
-<strong>WhatsApp:</strong>
-<a href="https://wa.me/918800193337" target="_blank">
-+91-8800193337
-</a>
-</p>
-
-<p>
-<strong>Location:</strong>
-<a href="https://maps.google.com/?q=G-272+Sector+63+Noida"
-target="_blank">
-📍 G-272, Sector-63, Noida, UP-201301
-</a>
-</p>
-
-</div>
-
-</div>
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="section-label">Get in Touch</div>
+      <h2>Contact Us</h2>
+      <p class="center">Ready to transform your surveillance infrastructure? Reach out.</p>
+      <div class="contact-cards">
+        <a href="mailto:contact@parvekshak.com" class="contact-card">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="4" width="20" height="16" rx="2" stroke="#1f8ef1" stroke-width="1.8"/>
+              <path d="M2 8l10 7 10-7" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">contact@parvekshak.com</div>
+        </a>
+        <a href="https://wa.me/918800193337" target="_blank" class="contact-card">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.114 1.04 4.46L2 22l5.54-1.04A9.958 9.958 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" stroke="#1f8ef1" stroke-width="1.8"/>
+              <path d="M8.5 9.5s.5-1 1.5-1 2 1 2 1l-1 2s1.5 2 3 3l2-1s1 1 1 2-1 1.5-1 1.5-4-.5-7-3.5S8.5 9.5 8.5 9.5z" stroke="#1f8ef1" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value">+91-8800193337</div>
+        </a>
+        <a href="https://maps.google.com/?q=G-272+Sector+63+Noida" target="_blank" class="contact-card">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#1f8ef1" stroke-width="1.8"/>
+              <circle cx="12" cy="9" r="2.5" stroke="#1f8ef1" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">G-272, Sector-63, Noida, UP-201301</div>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
-
 <footer class="footer">
-<p>© 2025 Parvekshak</p>
+  <div class="container footer-inner">
+    <div class="footer-logo">
+      <span class="logo-main">PARVEKSHAK</span>
+      <span class="logo-sub">AI Surveillance</span>
+    </div>
+    <p>© 2025 Parvekshak. Industrial Vision Intelligence.</p>
+  </div>
 </footer>
 
-
 <script>
-const track=document.querySelector('.carousel-track');
-let index=0;
+// Hero Carousel
+const heroTrack = document.querySelector('.carousel-track');
+const heroDots = document.querySelectorAll('.dot');
+let heroIndex = 0;
+const heroSlides = document.querySelectorAll('.carousel-slide');
+const heroTotal = heroSlides.length;
 
-setInterval(()=>{
-index=(index+1)%track.children.length;
-track.style.transform=
-`translateX(-${index*100}%)`;
-},4000);
+function goHero(idx) {
+  heroIndex = (idx + heroTotal) % heroTotal;
+  heroTrack.style.transform = `translateX(-${heroIndex * 100}%)`;
+  heroDots.forEach((d, i) => d.classList.toggle('active', i === heroIndex));
+}
+
+heroDots.forEach(d => d.addEventListener('click', () => goHero(+d.dataset.idx)));
+setInterval(() => goHero(heroIndex + 1), 4000);
+
+// Applications Carousel
+const appTrack = document.getElementById('appTrack');
+const appCards = appTrack.querySelectorAll('.app-card');
+const appDotsWrap = document.getElementById('appDots');
+const appPrev = document.getElementById('appPrev');
+const appNext = document.getElementById('appNext');
+
+let appIndex = 0;
+let visibleCards = 3;
+
+function getVisible() {
+  return window.innerWidth < 700 ? 1 : window.innerWidth < 1000 ? 2 : 3;
+}
+
+function buildAppDots() {
+  visibleCards = getVisible();
+  const pages = Math.ceil(appCards.length / visibleCards);
+  appDotsWrap.innerHTML = '';
+  for (let i = 0; i < pages; i++) {
+    const d = document.createElement('button');
+    d.className = 'app-dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goApp(i));
+    appDotsWrap.appendChild(d);
+  }
+}
+
+function goApp(idx) {
+  visibleCards = getVisible();
+  const pages = Math.ceil(appCards.length / visibleCards);
+  appIndex = (idx + pages) % pages;
+  const cardWidth = appCards[0].offsetWidth + 24;
+  appTrack.style.transform = `translateX(-${appIndex * visibleCards * cardWidth}px)`;
+  document.querySelectorAll('.app-dot').forEach((d, i) => d.classList.toggle('active', i === appIndex));
+}
+
+appPrev.addEventListener('click', () => goApp(appIndex - 1));
+appNext.addEventListener('click', () => goApp(appIndex + 1));
+
+let appTimer = setInterval(() => goApp(appIndex + 1), 5000);
+appTrack.addEventListener('mouseenter', () => clearInterval(appTimer));
+appTrack.addEventListener('mouseleave', () => { appTimer = setInterval(() => goApp(appIndex + 1), 5000); });
+
+buildAppDots();
+window.addEventListener('resize', () => { buildAppDots(); goApp(0); });
 </script>
-
 </body>
 </html>
