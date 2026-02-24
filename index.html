@@ -8,8 +8,1068 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+/* =============================================
+   PARVEKSHAK — Production CSS
+   Colour scheme: #0b1c2d (dark), #1f8ef1 (blue), #f6f8fa (light)
+============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Barlow', Arial, sans-serif;
+  color: #111;
+  line-height: 1.65;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 28px;
+}
+
+/* ── TYPOGRAPHY ── */
+h1, h2, h3, h4 {
+  font-family: 'Barlow Condensed', 'Barlow', Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+h1 { font-size: clamp(36px, 5vw, 58px); letter-spacing: -1px; }
+h2 { font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.5px; margin-bottom: 40px; }
+h3 { font-size: 20px; margin-bottom: 10px; }
+h4 { font-size: 17px; margin-bottom: 8px; }
+
+p { margin: 0 0 14px; }
+
+.section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #1f8ef1;
+  margin-bottom: 12px;
+}
+
+.light-label { color: rgba(31,142,241,0.8); }
+
+/* ── HEADER ── */
+.header {
+  background: #0b1c2d;
+  color: #fff;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+.logo-sub {
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.55;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+nav a {
+  margin-left: 4px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  letter-spacing: 0.3px;
+}
+
+nav a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.07);
+}
+
+/* ── BUTTONS ── */
+.btn {
+  background: #1f8ef1;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #1478d4;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(31,142,241,0.35);
+}
+
+.btn-ghost {
+  color: rgba(255,255,255,0.8);
+  padding: 12px 26px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: border-color 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+.btn-ghost:hover {
+  border-color: rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+/* ── HERO ── */
+.hero {
+  background: #0b1c2d;
+  color: white;
+  padding: 90px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(31,142,241,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31,142,241,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #1f8ef1;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  font-size: clamp(38px, 5.5vw, 62px);
+  margin-bottom: 22px;
+}
+
+.accent-line {
+  color: #1f8ef1;
+  position: relative;
+}
+
+.hero-text p {
+  font-size: 16px;
+  opacity: 0.78;
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.industries-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  opacity: 0.5;
+  flex-wrap: wrap;
+}
+
+.industries-row .sep { opacity: 0.4; }
+
+/* ── HERO CAROUSEL ── */
+.hero-carousel-wrap {
+  position: relative;
+}
+
+.carousel-frame {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #122f4a;
+  position: relative;
+}
+
+.carousel-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 10;
+  background: rgba(11,28,45,0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(31,142,241,0.3);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  letter-spacing: 0.5px;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.7); }
+}
+
+.hero-carousel {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 380px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f2640;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.carousel-slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 30px;
+  z-index: 1;
+}
+
+.no-img {
+  flex-direction: column;
+}
+
+.slide-label {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: rgba(31,142,241,0.15);
+  border: 1px solid rgba(31,142,241,0.3);
+  color: rgba(255,255,255,0.9);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 0;
+  background: #0b1c2d;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.dot.active {
+  background: #1f8ef1;
+  transform: scale(1.3);
+}
+
+/* ── TRUST BAND ── */
+.trust-band {
+  background: #fff;
+  border-top: 1px solid #e8edf2;
+  border-bottom: 1px solid #e8edf2;
+  padding: 18px 0;
+}
+
+.trust-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #444;
+  letter-spacing: 0.3px;
+}
+
+/* ── SECTIONS ── */
+.section {
+  padding: 80px 0;
+}
+
+.light { background: #f6f8fa; }
+.dark { background: #0b1c2d; color: white; }
+
+.section h2 { text-align: left; }
+
+/* ── PROBLEM CARDS ── */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.problem-card {
+  background: white;
+  padding: 32px 28px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #eaeff5;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.problem-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.problem-card.featured {
+  border-color: rgba(31,142,241,0.25);
+  background: linear-gradient(135deg, #fff 0%, #f0f7ff 100%);
+}
+
+.problem-icon {
+  margin-bottom: 18px;
+  color: #1f8ef1;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  border: 1px solid #eaeff5;
+}
+
+/* ── WHAT SECTION ── */
+.what-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.what-text h2 { text-align: left; }
+.what-text p { color: #444; font-size: 15.5px; }
+
+.what-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.pill {
+  background: #eef5fd;
+  color: #1f6fc4;
+  border: 1px solid #c6ddf7;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Animated scan visual */
+.what-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scan-box {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scan-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(31,142,241,0.25);
+  animation: ring-pulse 3s ease-in-out infinite;
+}
+
+.ring-1 { width: 100%; height: 100%; animation-delay: 0s; }
+.ring-2 { width: 70%; height: 70%; animation-delay: 0.6s; border-style: dashed; }
+.ring-3 { width: 42%; height: 42%; animation-delay: 1.2s; }
+
+@keyframes ring-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+.scan-center {
+  background: rgba(31,142,241,0.08);
+  border: 1.5px solid rgba(31,142,241,0.3);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  animation: center-glow 3s ease-in-out infinite;
+}
+
+@keyframes center-glow {
+  0%, 100% { box-shadow: 0 0 0 rgba(31,142,241,0); }
+  50% { box-shadow: 0 0 24px rgba(31,142,241,0.3); }
+}
+
+.scan-label {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(31,142,241,0.7);
+}
+
+.top-left { top: 20px; left: 20px; }
+.top-right { top: 20px; right: 20px; }
+.bottom-left { bottom: 20px; left: 20px; }
+.bottom-right { bottom: 20px; right: 20px; }
+
+/* ── HOW IT WORKS ── */
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 16px;
+  position: relative;
+}
+
+.how-step {
+  padding: 32px 28px;
+  position: relative;
+  background: white;
+  border: 1px solid #e8edf2;
+  border-radius: 10px;
+  margin: 0 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.how-step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.09);
+}
+
+.step-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: rgba(31,142,241,0.1);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -2px;
+}
+
+.step-icon {
+  color: #1f8ef1;
+  margin-bottom: 14px;
+}
+
+.how-step h4 {
+  font-size: 16px;
+  color: #0b1c2d;
+  margin-bottom: 8px;
+}
+
+.how-step p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── APPLICATIONS GRID ── */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.app-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e8edf2;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.1);
+}
+
+.app-img-wrap {
+  height: 180px;
+  background: #0a1825;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-anim-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.app-content {
+  padding: 20px 22px;
+}
+
+.app-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1f8ef1;
+  margin-bottom: 8px;
+}
+
+.app-content h4 {
+  font-size: 17px;
+  color: #0b1c2d;
+  margin-bottom: 8px;
+}
+
+.app-content p {
+  font-size: 13.5px;
+  color: #666;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── ROI ── */
+.roi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.roi-card {
+  background: white;
+  padding: 30px 28px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #eaeff5;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.roi-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.09);
+}
+
+.roi-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: rgba(31,142,241,0.08);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -2px;
+}
+
+.roi-card h3 { font-size: 18px; color: #0b1c2d; margin-bottom: 8px; }
+.roi-card p { font-size: 14px; color: #666; margin: 0; }
+
+/* ── INSTALLERS ── */
+.installers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.installers-text h2 { color: white; text-align: left; margin-bottom: 20px; }
+.installers-text p { color: rgba(255,255,255,0.65); font-size: 15.5px; }
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.feature-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.feature-item:last-child { border-bottom: none; }
+
+.feature-check {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(31,142,241,0.15);
+  border: 1px solid rgba(31,142,241,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.feature-item strong {
+  display: block;
+  color: white;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.feature-item p {
+  color: rgba(255,255,255,0.5);
+  font-size: 13.5px;
+  margin: 0;
+}
+
+/* ── CONTACT ── */
+.contact-wrap { text-align: center; }
+.contact-wrap h2 { margin-bottom: 12px; }
+.contact-wrap > p { color: #666; margin-bottom: 40px; }
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.contact-card {
+  background: white;
+  border: 1px solid #e8edf2;
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(31,142,241,0.12);
+  border-color: rgba(31,142,241,0.3);
+}
+
+.contact-icon {
+  width: 52px;
+  height: 52px;
+  background: #eef5fd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.contact-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.contact-value {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #0b1c2d;
+  line-height: 1.4;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: #060f19;
+  color: #555;
+  padding: 28px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer .logo-main { font-size: 15px; }
+.footer p { margin: 0; font-size: 13px; }
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── CASE STUDIES ── */
+.cs-intro {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 40px;
+  margin-top: -24px;
+}
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.cs-card {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e4eaf2;
+  padding: 32px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cs-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.09);
+}
+
+.cs-card-wide {
+  grid-column: 1 / -1;
+}
+
+.cs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cs-industry-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eef5fd;
+  color: #1567c4;
+  border: 1px solid #c6ddf7;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.cs-location {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+.cs-card h3 {
+  font-size: 20px;
+  color: #0b1c2d;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.cs-challenge, .cs-solution {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.cs-label {
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #1f8ef1;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.cs-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: #f6f8fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 4px;
+}
+
+.cs-stats-vertical {
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(135deg, #0d2137 0%, #122f4a 100%);
+  flex-shrink: 0;
+  align-self: start;
+  min-width: 260px;
+}
+
+.cs-stats-vertical .cs-stat-num { color: #fff; }
+.cs-stats-vertical .cs-stat-desc { color: rgba(255,255,255,0.55); }
+
+.cs-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cs-stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #0b1c2d;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.cs-stat-num span {
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.cs-stat-desc {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.cs-testimonial {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #f6f8fa;
+  border-left: 3px solid #1f8ef1;
+  border-radius: 0 10px 10px 0;
+  padding: 18px 18px 18px 16px;
+  margin-top: auto;
+}
+
+.cs-avatar {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #dce8f7;
+  box-shadow: 0 2px 10px rgba(31,142,241,0.15);
+}
+
+.cs-testimonial-body {
+  flex: 1;
+  position: relative;
+}
+
+.cs-quote-mark {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cs-review {
+  font-size: 13.5px;
+  color: #444;
+  font-style: italic;
+  line-height: 1.65;
+  margin: 0 0 12px;
+  padding-right: 28px;
+}
+
+.cs-person {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cs-stars {
+  font-size: 12px;
+  color: #f59e0b;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.cs-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #0b1c2d;
+}
+
+.cs-designation {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+
+.cs-wide-inner {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+}
+
+.cs-wide-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1000px) {
+  .app-grid { grid-template-columns: repeat(2, 1fr); }
+  .how-steps { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .installers-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 900px) {
+  .cs-grid { grid-template-columns: 1fr; }
+  .cs-wide-inner { flex-direction: column; }
+  .cs-stats-vertical { min-width: unset; width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .what-grid { grid-template-columns: 1fr; gap: 32px; }
+  .app-grid { grid-template-columns: 1fr; }
+  .contact-cards { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+  .carousel-slide { height: 260px; }
+  .how-steps { grid-template-columns: 1fr 1fr; }
+  nav a:not(.btn) { display: none; }
+}
+
+@media (max-width: 600px) {
+  .how-steps { grid-template-columns: 1fr; gap: 12px; }
+  .how-step { margin: 0; }
+}
+
+  </style>
 </head>
 
 <body>
@@ -38,6 +1098,7 @@
     <nav>
       <a href="#how">How It Works</a>
       <a href="#applications">Applications</a>
+      <a href="#case-studies">Case Studies</a>
       <a href="#installers">Integrators</a>
       <a href="#contact" class="btn small">Contact Us</a>
     </nav>
@@ -281,25 +1342,149 @@
     <div class="section-label">Use Cases</div>
     <h2>Industrial Applications</h2>
 
-    <div class="app-carousel-wrap">
-      <button class="app-arrow app-arrow-left" id="appPrev">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
+    <div class="app-grid">
 
-      <div class="app-carousel-viewport">
-        <div class="app-carousel-track" id="appTrack">
-
+          <!-- CARD 1: Factory & Plant Surveillance -->
           <div class="app-card">
             <div class="app-img-wrap">
-              <div class="app-img-placeholder">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <rect x="4" y="12" width="40" height="28" rx="2" stroke="#1f8ef1" stroke-width="1.8"/>
-                  <path d="M14 28l6-6 4 4 6-8 6 10" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  <rect x="4" y="8" width="8" height="6" rx="1" stroke="#1f8ef1" stroke-width="1.5"/>
-                </svg>
-              </div>
+              <svg class="app-anim-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0a1e30"/>
+                    <stop offset="100%" stop-color="#0d2840"/>
+                  </linearGradient>
+                  <linearGradient id="floor1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#112030"/>
+                    <stop offset="100%" stop-color="#0a1825"/>
+                  </linearGradient>
+                  <!-- scan line gradient -->
+                  <linearGradient id="scan1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1f8ef1" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#1f8ef1" stop-opacity="0.18"/>
+                    <stop offset="100%" stop-color="#1f8ef1" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <!-- Background -->
+                <rect width="400" height="200" fill="url(#bg1)"/>
+                <!-- Grid floor -->
+                <g opacity="0.12">
+                  <line x1="0" y1="160" x2="400" y2="160" stroke="#1f8ef1" stroke-width="0.5"/>
+                  <line x1="0" y1="175" x2="400" y2="175" stroke="#1f8ef1" stroke-width="0.5"/>
+                  <line x1="0" y1="190" x2="400" y2="190" stroke="#1f8ef1" stroke-width="0.5"/>
+                  <line x1="50" y1="140" x2="50" y2="200" stroke="#1f8ef1" stroke-width="0.5"/>
+                  <line x1="100" y1="140" x2="100" y2="200" stroke="#1f8ef1" stroke-width="0.5"/>
+                  <line x1="150" y1="140" x2="150" y2="200" stroke="#1f8ef1" stroke-width="0.5"/>
+                  <line x1="200" y1="140" x2="200" y2="200" stroke="#1f8ef1" stroke-width="0.5"/>
+                  <line x1="250" y1="140" x2="250" y2="200" stroke="#1f8ef1" stroke-width="0.5"/>
+                  <line x1="300" y1="140" x2="300" y2="200" stroke="#1f8ef1" stroke-width="0.5"/>
+                  <line x1="350" y1="140" x2="350" y2="200" stroke="#1f8ef1" stroke-width="0.5"/>
+                </g>
+
+                <!-- Machine 1 - left -->
+                <rect x="30" y="90" width="60" height="70" rx="3" fill="#0f2d44" stroke="#1f5a8a" stroke-width="1"/>
+                <rect x="38" y="98" width="44" height="30" rx="2" fill="#0a1f30" stroke="#1f8ef1" stroke-width="0.7" opacity="0.7"/>
+                <!-- machine screen glow -->
+                <rect x="39" y="99" width="42" height="28" rx="1.5" fill="#1f8ef1" opacity="0.07">
+                  <animate attributeName="opacity" values="0.07;0.14;0.07" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                <!-- graph line on machine -->
+                <polyline points="42,118 50,112 58,115 66,108 74,113 78,107" fill="none" stroke="#1f8ef1" stroke-width="1.2" opacity="0.8"/>
+                <rect x="38" y="134" width="44" height="8" rx="1" fill="#1a3a58" stroke="#1f5a8a" stroke-width="0.5"/>
+                <rect x="50" y="160" width="20" height="6" rx="1" fill="#1a3a58"/>
+                <!-- spinning gear -->
+                <circle cx="60" cy="148" r="6" fill="none" stroke="#1f8ef1" stroke-width="1.2" opacity="0.6"/>
+                <circle cx="60" cy="148" r="2.5" fill="#1f8ef1" opacity="0.4"/>
+                <g transform-origin="60 148">
+                  <animateTransform attributeName="transform" type="rotate" from="0 60 148" to="360 60 148" dur="4s" repeatCount="indefinite"/>
+                  <line x1="60" y1="142" x2="60" y2="139" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <line x1="60" y1="154" x2="60" y2="157" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <line x1="54" y1="148" x2="51" y2="148" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <line x1="66" y1="148" x2="69" y2="148" stroke="#1f8ef1" stroke-width="1.5"/>
+                </g>
+
+                <!-- Machine 2 - center -->
+                <rect x="160" y="75" width="80" height="85" rx="3" fill="#0f2d44" stroke="#1f5a8a" stroke-width="1"/>
+                <rect x="168" y="83" width="64" height="40" rx="2" fill="#0a1f30" stroke="#1f8ef1" stroke-width="0.7" opacity="0.8"/>
+                <!-- pulsing display -->
+                <rect x="169" y="84" width="62" height="38" rx="1.5" fill="#1f8ef1" opacity="0.05">
+                  <animate attributeName="opacity" values="0.05;0.12;0.05" dur="1.5s" repeatCount="indefinite"/>
+                </rect>
+                <polyline points="172,112 182,100 192,106 202,95 212,102 222,96 228,104" fill="none" stroke="#1f8ef1" stroke-width="1.4" opacity="0.9"/>
+                <!-- status lights -->
+                <circle cx="172" cy="130" r="4" fill="#22c55e">
+                  <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="184" cy="130" r="4" fill="#1f8ef1" opacity="0.7"/>
+                <circle cx="196" cy="130" r="4" fill="#1f8ef1" opacity="0.7"/>
+                <rect x="168" y="140" width="64" height="10" rx="2" fill="#1a3a58"/>
+                <rect x="180" y="160" width="40" height="6" rx="1" fill="#1a3a58"/>
+
+                <!-- Machine 3 - right -->
+                <rect x="305" y="95" width="65" height="65" rx="3" fill="#0f2d44" stroke="#1f5a8a" stroke-width="1"/>
+                <rect x="313" y="103" width="49" height="28" rx="2" fill="#0a1f30" stroke="#1f8ef1" stroke-width="0.7" opacity="0.7"/>
+                <rect x="314" y="104" width="47" height="26" rx="1.5" fill="#1f8ef1" opacity="0.06">
+                  <animate attributeName="opacity" values="0.06;0.13;0.06" dur="2.3s" repeatCount="indefinite"/>
+                </rect>
+                <polyline points="317,122 325,115 333,118 341,112 349,116 355,110" fill="none" stroke="#1f8ef1" stroke-width="1.2" opacity="0.8"/>
+                <rect x="313" y="137" width="49" height="10" rx="2" fill="#1a3a58"/>
+                <!-- spinning gear right -->
+                <circle cx="337" cy="153" r="6" fill="none" stroke="#1f8ef1" stroke-width="1.2" opacity="0.5"/>
+                <g transform-origin="337 153">
+                  <animateTransform attributeName="transform" type="rotate" from="360 337 153" to="0 337 153" dur="3s" repeatCount="indefinite"/>
+                  <line x1="337" y1="147" x2="337" y2="144" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <line x1="337" y1="159" x2="337" y2="162" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <line x1="331" y1="153" x2="328" y2="153" stroke="#1f8ef1" stroke-width="1.5"/>
+                  <line x1="343" y1="153" x2="346" y2="153" stroke="#1f8ef1" stroke-width="1.5"/>
+                </g>
+
+                <!-- Conveyor belt center-bottom -->
+                <rect x="100" y="155" width="200" height="12" rx="2" fill="#0f2d44" stroke="#1a4a70" stroke-width="0.8"/>
+                <rect x="102" y="157" width="196" height="8" rx="1" fill="#0a1825"/>
+                <!-- belt motion dashes -->
+                <g>
+                  <rect x="110" y="159" width="20" height="4" rx="1" fill="#1f8ef1" opacity="0.25">
+                    <animateTransform attributeName="transform" type="translate" from="0,0" to="196,0" dur="3s" repeatCount="indefinite"/>
+                  </rect>
+                  <rect x="160" y="159" width="20" height="4" rx="1" fill="#1f8ef1" opacity="0.25">
+                    <animateTransform attributeName="transform" type="translate" from="-50,0" to="146,0" dur="3s" repeatCount="indefinite"/>
+                  </rect>
+                  <rect x="210" y="159" width="20" height="4" rx="1" fill="#1f8ef1" opacity="0.25">
+                    <animateTransform attributeName="transform" type="translate" from="-100,0" to="96,0" dur="3s" repeatCount="indefinite"/>
+                  </rect>
+                </g>
+
+                <!-- CCTV Camera top-right -->
+                <rect x="355" y="15" width="22" height="14" rx="3" fill="#1f8ef1" opacity="0.85"/>
+                <circle cx="348" cy="22" r="5" fill="#0a1825" stroke="#1f8ef1" stroke-width="1.2"/>
+                <circle cx="348" cy="22" r="2.5" fill="#1f8ef1" opacity="0.4"/>
+                <line x1="355" y1="22" x2="377" y2="22" stroke="#1f5a8a" stroke-width="1"/>
+                <line x1="366" y1="29" x2="366" y2="45" stroke="#1f5a8a" stroke-width="1"/>
+                <!-- camera FOV lines -->
+                <line x1="348" y1="27" x2="200" y2="160" stroke="#1f8ef1" stroke-width="0.6" stroke-dasharray="4 4" opacity="0.25"/>
+                <line x1="348" y1="17" x2="60" y2="90" stroke="#1f8ef1" stroke-width="0.6" stroke-dasharray="4 4" opacity="0.25"/>
+
+                <!-- AI scan sweep -->
+                <rect x="0" y="0" width="400" height="200" fill="url(#scan1)" opacity="0.7">
+                  <animateTransform attributeName="transform" type="translate" from="0,-200" to="0,200" dur="3s" repeatCount="indefinite"/>
+                </rect>
+
+                <!-- Detection boxes -->
+                <rect x="30" y="88" width="60" height="74" rx="2" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="4 2" opacity="0">
+                  <animate attributeName="opacity" values="0;0;0.8;0.8;0" dur="6s" repeatCount="indefinite" begin="0s"/>
+                </rect>
+                <rect x="160" y="73" width="80" height="89" rx="2" fill="none" stroke="#1f8ef1" stroke-width="1.2" stroke-dasharray="4 2" opacity="0">
+                  <animate attributeName="opacity" values="0;0.8;0.8;0;0" dur="6s" repeatCount="indefinite" begin="2s"/>
+                </rect>
+                <rect x="305" y="93" width="65" height="69" rx="2" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="4 2" opacity="0">
+                  <animate attributeName="opacity" values="0;0;0;0.8;0.8;0" dur="6s" repeatCount="indefinite" begin="1s"/>
+                </rect>
+
+                <!-- HUD label -->
+                <text x="12" y="18" font-family="monospace" font-size="8" fill="#1f8ef1" opacity="0.7">FACTORY_ZONE_A · AI ACTIVE</text>
+                <circle cx="8" cy="14" r="3" fill="#22c55e">
+                  <animate attributeName="opacity" values="1;0.3;1" dur="1.4s" repeatCount="indefinite"/>
+                </circle>
+              </svg>
             </div>
             <div class="app-content">
               <div class="app-tag">Manufacturing</div>
@@ -308,16 +1493,136 @@
             </div>
           </div>
 
+          <!-- CARD 2: Industrial Safety Monitoring -->
           <div class="app-card">
             <div class="app-img-wrap">
-              <div class="app-img-placeholder">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 6L44 20V40H4V20L24 6Z" stroke="#1f8ef1" stroke-width="1.8"/>
-                  <path d="M16 40V28h16v12" stroke="#1f8ef1" stroke-width="1.8"/>
-                  <circle cx="24" cy="18" r="4" stroke="#1f8ef1" stroke-width="1.8"/>
-                  <path d="M20 14l4-4 4 4" stroke="#1f8ef1" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
+              <svg class="app-anim-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0a1e30"/>
+                    <stop offset="100%" stop-color="#0d2840"/>
+                  </linearGradient>
+                  <radialGradient id="alarm2" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ef4444" stop-opacity="0.25"/>
+                    <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#bg2)"/>
+
+                <!-- floor lines -->
+                <line x1="0" y1="170" x2="400" y2="170" stroke="#1f8ef1" stroke-width="0.4" opacity="0.15"/>
+                <line x1="0" y1="185" x2="400" y2="185" stroke="#1f8ef1" stroke-width="0.4" opacity="0.1"/>
+
+                <!-- Worker 1 - WITH PPE (compliant) -->
+                <g transform="translate(80,80)">
+                  <!-- body -->
+                  <rect x="-10" y="30" width="20" height="40" rx="3" fill="#1a5c2a"/>
+                  <!-- hard hat -->
+                  <ellipse cx="0" cy="22" rx="14" ry="8" fill="#f59e0b"/>
+                  <ellipse cx="0" cy="26" rx="12" ry="4" fill="#d97706"/>
+                  <!-- head -->
+                  <circle cx="0" cy="18" r="11" fill="#c8956a"/>
+                  <!-- vest stripes -->
+                  <line x1="-10" y1="42" x2="10" y2="42" stroke="#f59e0b" stroke-width="2"/>
+                  <line x1="-10" y1="52" x2="10" y2="52" stroke="#f59e0b" stroke-width="2"/>
+                  <!-- arms -->
+                  <line x1="-10" y1="36" x2="-22" y2="55" stroke="#1a5c2a" stroke-width="5" stroke-linecap="round"/>
+                  <line x1="10" y1="36" x2="22" y2="55" stroke="#1a5c2a" stroke-width="5" stroke-linecap="round"/>
+                  <!-- legs -->
+                  <line x1="-5" y1="70" x2="-5" y2="90" stroke="#1a3a8a" stroke-width="6" stroke-linecap="round"/>
+                  <line x1="5" y1="70" x2="5" y2="90" stroke="#1a3a8a" stroke-width="6" stroke-linecap="round"/>
+                  <!-- boots -->
+                  <ellipse cx="-5" cy="91" rx="6" ry="3" fill="#333"/>
+                  <ellipse cx="5" cy="91" rx="6" ry="3" fill="#333"/>
+                  <!-- green check badge -->
+                  <circle cx="18" cy="0" r="10" fill="#22c55e"/>
+                  <polyline points="13,0 17,4 23,-3" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+
+                <!-- Worker 2 - WITHOUT helmet (violation) -->
+                <g transform="translate(200,80)">
+                  <!-- body -->
+                  <rect x="-10" y="30" width="20" height="40" rx="3" fill="#2a3a50"/>
+                  <!-- head - no hat -->
+                  <circle cx="0" cy="18" r="11" fill="#d4a574"/>
+                  <!-- hair -->
+                  <path d="M-10 15 Q0 8 10 15 Q8 10 0 9 Q-8 10 -10 15Z" fill="#2a1a0a"/>
+                  <!-- arms -->
+                  <line x1="-10" y1="36" x2="-22" y2="55" stroke="#2a3a50" stroke-width="5" stroke-linecap="round"/>
+                  <line x1="10" y1="36" x2="15" y2="52" stroke="#2a3a50" stroke-width="5" stroke-linecap="round"/>
+                  <!-- legs -->
+                  <line x1="-5" y1="70" x2="-5" y2="90" stroke="#1a1a3a" stroke-width="6" stroke-linecap="round"/>
+                  <line x1="5" y1="70" x2="5" y2="90" stroke="#1a1a3a" stroke-width="6" stroke-linecap="round"/>
+                  <!-- boots -->
+                  <ellipse cx="-5" cy="91" rx="6" ry="3" fill="#333"/>
+                  <ellipse cx="5" cy="91" rx="6" ry="3" fill="#333"/>
+                  <!-- red alert box around worker -->
+                  <rect x="-22" y="-8" width="44" height="108" rx="3" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 3">
+                    <animate attributeName="opacity" values="1;0.4;1" dur="1.2s" repeatCount="indefinite"/>
+                  </rect>
+                  <!-- alarm glow -->
+                  <circle cx="0" cy="50" r="35" fill="url(#alarm2)">
+                    <animate attributeName="r" values="35;50;35" dur="1.4s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.4s" repeatCount="indefinite"/>
+                  </circle>
+                  <!-- red X badge -->
+                  <circle cx="18" cy="0" r="10" fill="#ef4444"/>
+                  <line x1="13" y1="-5" x2="23" y2="5" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+                  <line x1="23" y1="-5" x2="13" y2="5" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+                  <!-- PPE VIOLATION label -->
+                  <rect x="-38" y="-30" width="76" height="16" rx="3" fill="#ef4444" opacity="0.9">
+                    <animate attributeName="opacity" values="0.9;0.5;0.9" dur="1.2s" repeatCount="indefinite"/>
+                  </rect>
+                  <text x="0" y="-19" font-family="monospace" font-size="7.5" fill="white" text-anchor="middle">⚠ PPE VIOLATION</text>
+                </g>
+
+                <!-- Worker 3 - compliant right side -->
+                <g transform="translate(320,85)">
+                  <rect x="-10" y="30" width="20" height="38" rx="3" fill="#1a4a5a"/>
+                  <ellipse cx="0" cy="22" rx="13" ry="7" fill="#ef4444"/>
+                  <circle cx="0" cy="18" r="10" fill="#b87a50"/>
+                  <rect x="-8" y="42" width="16" height="5" fill="#f59e0b"/>
+                  <line x1="-10" y1="36" x2="-20" y2="52" stroke="#1a4a5a" stroke-width="5" stroke-linecap="round"/>
+                  <line x1="10" y1="36" x2="20" y2="52" stroke="#1a4a5a" stroke-width="5" stroke-linecap="round"/>
+                  <line x1="-4" y1="68" x2="-4" y2="85" stroke="#1a1a3a" stroke-width="6" stroke-linecap="round"/>
+                  <line x1="4" y1="68" x2="4" y2="85" stroke="#1a1a3a" stroke-width="6" stroke-linecap="round"/>
+                  <ellipse cx="-4" cy="86" rx="5" ry="3" fill="#333"/>
+                  <ellipse cx="4" cy="86" rx="5" ry="3" fill="#333"/>
+                  <circle cx="16" cy="2" r="9" fill="#22c55e"/>
+                  <polyline points="11,2 15,6 21,-1" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+
+                <!-- Danger zone tape on floor -->
+                <g opacity="0.7">
+                  <rect x="155" y="165" width="90" height="8" rx="1" fill="#f59e0b"/>
+                  <line x1="163" y1="165" x2="157" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                  <line x1="171" y1="165" x2="165" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                  <line x1="179" y1="165" x2="173" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                  <line x1="187" y1="165" x2="181" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                  <line x1="195" y1="165" x2="189" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                  <line x1="203" y1="165" x2="197" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                  <line x1="211" y1="165" x2="205" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                  <line x1="219" y1="165" x2="213" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                  <line x1="227" y1="165" x2="221" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                  <line x1="235" y1="165" x2="229" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                  <line x1="243" y1="165" x2="237" y2="173" stroke="#1a1a1a" stroke-width="2"/>
+                </g>
+
+                <!-- Alert notification -->
+                <g opacity="0">
+                  <animate attributeName="opacity" values="0;0;1;1;0" dur="4s" repeatCount="indefinite"/>
+                  <rect x="10" y="140" width="150" height="28" rx="4" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.2"/>
+                  <circle cx="24" cy="154" r="6" fill="#ef4444"/>
+                  <text x="34" y="151" font-family="monospace" font-size="7" fill="#ef4444">ALERT: No Hard Hat</text>
+                  <text x="34" y="161" font-family="monospace" font-size="7" fill="#aaa">Zone B · Worker ID: 042</text>
+                </g>
+
+                <!-- HUD -->
+                <text x="12" y="18" font-family="monospace" font-size="8" fill="#1f8ef1" opacity="0.7">SAFETY_MONITOR · PPE CHECK</text>
+                <circle cx="8" cy="14" r="3" fill="#ef4444">
+                  <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                </circle>
+              </svg>
             </div>
             <div class="app-content">
               <div class="app-tag">Safety</div>
@@ -326,17 +1631,116 @@
             </div>
           </div>
 
+          <!-- CARD 3: Warehouse Operations -->
           <div class="app-card">
             <div class="app-img-wrap">
-              <div class="app-img-placeholder">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <rect x="6" y="18" width="36" height="22" rx="2" stroke="#1f8ef1" stroke-width="1.8"/>
-                  <rect x="12" y="26" width="8" height="14" stroke="#1f8ef1" stroke-width="1.5"/>
-                  <rect x="28" y="26" width="8" height="14" stroke="#1f8ef1" stroke-width="1.5"/>
-                  <path d="M6 18L24 8l18 10" stroke="#1f8ef1" stroke-width="1.8"/>
-                  <line x1="20" y1="18" x2="28" y2="18" stroke="#1f8ef1" stroke-width="1.5" stroke-dasharray="2 2"/>
-                </svg>
-              </div>
+              <svg class="app-anim-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0a1e30"/>
+                    <stop offset="100%" stop-color="#0d2840"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#bg3)"/>
+
+                <!-- Warehouse shelves - left -->
+                <g>
+                  <rect x="20" y="40" width="12" height="130" fill="#0f2d44" stroke="#1a4a70" stroke-width="0.8"/>
+                  <rect x="80" y="40" width="12" height="130" fill="#0f2d44" stroke="#1a4a70" stroke-width="0.8"/>
+                  <!-- shelf levels -->
+                  <rect x="20" y="60" width="72" height="8" fill="#132a40" stroke="#1a4a70" stroke-width="0.5"/>
+                  <rect x="20" y="95" width="72" height="8" fill="#132a40" stroke="#1a4a70" stroke-width="0.5"/>
+                  <rect x="20" y="130" width="72" height="8" fill="#132a40" stroke="#1a4a70" stroke-width="0.5"/>
+                  <!-- boxes on shelves -->
+                  <rect x="25" y="50" width="18" height="10" rx="1" fill="#1a4a30" stroke="#22c55e" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="46" y="50" width="14" height="10" rx="1" fill="#1a3a50" stroke="#1f8ef1" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="63" y="52" width="16" height="8" rx="1" fill="#3a2a10" stroke="#f59e0b" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="25" y="82" width="20" height="13" rx="1" fill="#1a3a50" stroke="#1f8ef1" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="48" y="84" width="16" height="11" rx="1" fill="#1a4a30" stroke="#22c55e" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="67" y="83" width="14" height="12" rx="1" fill="#1a3a50" stroke="#1f8ef1" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="25" y="118" width="22" height="12" rx="1" fill="#3a2a10" stroke="#f59e0b" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="50" y="119" width="16" height="11" rx="1" fill="#1a4a30" stroke="#22c55e" stroke-width="0.5" opacity="0.8"/>
+                </g>
+
+                <!-- Warehouse shelves - right -->
+                <g>
+                  <rect x="308" y="40" width="12" height="130" fill="#0f2d44" stroke="#1a4a70" stroke-width="0.8"/>
+                  <rect x="368" y="40" width="12" height="130" fill="#0f2d44" stroke="#1a4a70" stroke-width="0.8"/>
+                  <rect x="308" y="60" width="72" height="8" fill="#132a40" stroke="#1a4a70" stroke-width="0.5"/>
+                  <rect x="308" y="95" width="72" height="8" fill="#132a40" stroke="#1a4a70" stroke-width="0.5"/>
+                  <rect x="308" y="130" width="72" height="8" fill="#132a40" stroke="#1a4a70" stroke-width="0.5"/>
+                  <rect x="313" y="50" width="20" height="10" rx="1" fill="#1a3a50" stroke="#1f8ef1" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="336" y="51" width="16" height="9" rx="1" fill="#1a4a30" stroke="#22c55e" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="355" y="50" width="18" height="10" rx="1" fill="#3a2a10" stroke="#f59e0b" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="313" y="82" width="18" height="13" rx="1" fill="#1a4a30" stroke="#22c55e" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="334" y="83" width="20" height="12" rx="1" fill="#1a3a50" stroke="#1f8ef1" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="357" y="84" width="14" height="11" rx="1" fill="#3a2a10" stroke="#f59e0b" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="313" y="118" width="22" height="12" rx="1" fill="#1a3a50" stroke="#1f8ef1" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="338" y="119" width="18" height="11" rx="1" fill="#1a4a30" stroke="#22c55e" stroke-width="0.5" opacity="0.8"/>
+                </g>
+
+                <!-- Center aisle floor -->
+                <rect x="100" y="160" width="200" height="30" fill="#0a1825" opacity="0.8"/>
+                <!-- aisle lines -->
+                <line x1="100" y1="160" x2="100" y2="190" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5"/>
+                <line x1="300" y1="160" x2="300" y2="190" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5"/>
+
+                <!-- Forklift animated moving through aisle -->
+                <g>
+                  <animateTransform attributeName="transform" type="translate" from="-40,0" to="320,0" dur="8s" repeatCount="indefinite"/>
+                  <!-- forklift body -->
+                  <rect x="100" y="128" width="50" height="34" rx="2" fill="#1a4a6a"/>
+                  <!-- mast -->
+                  <rect x="142" y="100" width="8" height="62" rx="1" fill="#1f5a8a"/>
+                  <!-- forks -->
+                  <rect x="148" y="148" width="24" height="3" rx="1" fill="#2a7abf"/>
+                  <rect x="148" y="154" width="24" height="3" rx="1" fill="#2a7abf"/>
+                  <!-- package on forks -->
+                  <rect x="150" y="136" width="22" height="12" rx="1" fill="#3a2a10" stroke="#f59e0b" stroke-width="1"/>
+                  <!-- wheel -->
+                  <circle cx="112" cy="162" r="7" fill="#0a1020" stroke="#1f8ef1" stroke-width="1">
+                    <animateTransform attributeName="transform" type="rotate" from="0 112 162" to="360 112 162" dur="1s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="140" cy="162" r="7" fill="#0a1020" stroke="#1f8ef1" stroke-width="1">
+                    <animateTransform attributeName="transform" type="rotate" from="0 140 162" to="360 140 162" dur="1s" repeatCount="indefinite"/>
+                  </circle>
+                  <!-- headlight -->
+                  <circle cx="102" cy="140" r="4" fill="#f59e0b" opacity="0.8">
+                    <animate attributeName="opacity" values="0.8;1;0.8" dur="0.5s" repeatCount="indefinite"/>
+                  </circle>
+                </g>
+
+                <!-- tracking path dots -->
+                <g opacity="0.4">
+                  <circle cx="110" cy="175" r="2" fill="#1f8ef1">
+                    <animate attributeName="opacity" values="0.4;0;0.4" dur="8s" repeatCount="indefinite" begin="0s"/>
+                  </circle>
+                  <circle cx="160" cy="175" r="2" fill="#1f8ef1">
+                    <animate attributeName="opacity" values="0;0.4;0" dur="8s" repeatCount="indefinite" begin="1s"/>
+                  </circle>
+                  <circle cx="210" cy="175" r="2" fill="#1f8ef1">
+                    <animate attributeName="opacity" values="0;0;0.4;0" dur="8s" repeatCount="indefinite" begin="2s"/>
+                  </circle>
+                  <circle cx="260" cy="175" r="2" fill="#1f8ef1">
+                    <animate attributeName="opacity" values="0;0;0;0.4" dur="8s" repeatCount="indefinite" begin="3s"/>
+                  </circle>
+                </g>
+
+                <!-- Overhead CCTV -->
+                <rect x="190" y="10" width="20" height="12" rx="3" fill="#1f8ef1" opacity="0.8"/>
+                <circle cx="200" cy="28" r="5" fill="#0a1825" stroke="#1f8ef1" stroke-width="1.2"/>
+                <circle cx="200" cy="28" r="2.5" fill="#1f8ef1" opacity="0.5"/>
+                <line x1="200" y1="22" x2="200" y2="10" stroke="#1f5a8a" stroke-width="1"/>
+
+                <!-- HUD -->
+                <text x="12" y="18" font-family="monospace" font-size="8" fill="#1f8ef1" opacity="0.7">WAREHOUSE_OPS · TRACKING</text>
+                <circle cx="8" cy="14" r="3" fill="#22c55e">
+                  <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+                </circle>
+
+                <!-- motion trail line -->
+                <line x1="100" y1="145" x2="300" y2="145" stroke="#1f8ef1" stroke-width="0.5" stroke-dasharray="3 6" opacity="0.2"/>
+              </svg>
             </div>
             <div class="app-content">
               <div class="app-tag">Operations</div>
@@ -345,16 +1749,132 @@
             </div>
           </div>
 
+          <!-- CARD 4: Critical Zone Monitoring -->
           <div class="app-card">
             <div class="app-img-wrap">
-              <div class="app-img-placeholder">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <circle cx="24" cy="24" r="16" stroke="#1f8ef1" stroke-width="1.8"/>
-                  <circle cx="24" cy="24" r="8" stroke="#1f8ef1" stroke-width="1.5" stroke-dasharray="3 2"/>
-                  <circle cx="24" cy="24" r="2.5" fill="#1f8ef1"/>
-                  <path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round"/>
-                </svg>
-              </div>
+              <svg class="app-anim-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0a1e30"/>
+                    <stop offset="100%" stop-color="#0d2840"/>
+                  </linearGradient>
+                  <radialGradient id="doorGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#1f8ef1" stop-opacity="0.2"/>
+                    <stop offset="100%" stop-color="#1f8ef1" stop-opacity="0"/>
+                  </radialGradient>
+                  <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ef4444" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#bg4)"/>
+
+                <!-- Server racks background -->
+                <g opacity="0.6">
+                  <rect x="10" y="30" width="30" height="140" rx="2" fill="#0f2030" stroke="#1a4060" stroke-width="0.8"/>
+                  <rect x="10" y="30" width="30" height="140" rx="2" fill="#0f2030" stroke="#1a4060" stroke-width="0.8"/>
+                  <!-- rack units -->
+                  <rect x="13" y="35" width="24" height="5" rx="1" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.4"/>
+                  <circle cx="33" cy="37.5" r="2" fill="#22c55e" opacity="0.9"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.2s" repeatCount="indefinite"/></circle>
+                  <rect x="13" y="43" width="24" height="5" rx="1" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.4"/>
+                  <circle cx="33" cy="45.5" r="2" fill="#22c55e" opacity="0.9"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="0.9s" repeatCount="indefinite" begin="0.3s"/></circle>
+                  <rect x="13" y="51" width="24" height="5" rx="1" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.4"/>
+                  <circle cx="33" cy="53.5" r="2" fill="#1f8ef1" opacity="0.8"/>
+                  <rect x="13" y="59" width="24" height="5" rx="1" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.4"/>
+                  <circle cx="33" cy="61.5" r="2" fill="#f59e0b" opacity="0.8"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite"/></circle>
+                  <rect x="13" y="67" width="24" height="5" rx="1" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.4"/>
+                  <circle cx="33" cy="69.5" r="2" fill="#22c55e" opacity="0.9"/>
+                  <!-- cable tangle bottom -->
+                  <path d="M13 140 Q20 148 30 145 Q38 142 30 155 Q20 162 13 158" fill="none" stroke="#1f8ef1" stroke-width="0.8" opacity="0.4"/>
+                  <path d="M15 140 Q25 150 28 143 Q34 136 25 155 Q18 165 13 160" fill="none" stroke="#22c55e" stroke-width="0.8" opacity="0.4"/>
+                </g>
+                <g opacity="0.6" transform="translate(360,0)">
+                  <rect x="-40" y="30" width="30" height="140" rx="2" fill="#0f2030" stroke="#1a4060" stroke-width="0.8"/>
+                  <rect x="-37" y="35" width="24" height="5" rx="1" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.4"/>
+                  <circle cx="-17" cy="37.5" r="2" fill="#1f8ef1" opacity="0.8"/>
+                  <rect x="-37" y="43" width="24" height="5" rx="1" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.4"/>
+                  <circle cx="-17" cy="45.5" r="2" fill="#22c55e" opacity="0.9"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.5s" repeatCount="indefinite"/></circle>
+                  <rect x="-37" y="51" width="24" height="5" rx="1" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.4"/>
+                  <circle cx="-17" cy="53.5" r="2" fill="#f59e0b" opacity="0.8"/>
+                  <rect x="-37" y="59" width="24" height="5" rx="1" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.4"/>
+                  <circle cx="-17" cy="61.5" r="2" fill="#22c55e" opacity="0.9"/>
+                  <rect x="-37" y="67" width="24" height="5" rx="1" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.4"/>
+                  <circle cx="-17" cy="69.5" r="2" fill="#1f8ef1" opacity="0.8"/>
+                </g>
+
+                <!-- Restricted door center -->
+                <rect x="155" y="40" width="90" height="140" rx="2" fill="#0c2035" stroke="#1f8ef1" stroke-width="1.5"/>
+                <!-- door glow -->
+                <rect x="155" y="40" width="90" height="140" rx="2" fill="url(#doorGlow)">
+                  <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+                </rect>
+                <!-- door panel lines -->
+                <rect x="163" y="50" width="32" height="55" rx="1" fill="#0a1825" stroke="#1a4a70" stroke-width="0.7"/>
+                <rect x="205" y="50" width="32" height="55" rx="1" fill="#0a1825" stroke="#1a4a70" stroke-width="0.7"/>
+                <rect x="163" y="115" width="74" height="52" rx="1" fill="#0a1825" stroke="#1a4a70" stroke-width="0.7"/>
+
+                <!-- Keypad -->
+                <rect x="248" y="95" width="28" height="36" rx="3" fill="#0f2d44" stroke="#1f8ef1" stroke-width="1"/>
+                <rect x="251" y="98" width="22" height="10" rx="1" fill="#0a1520" stroke="#1f8ef1" stroke-width="0.5"/>
+                <!-- keypad display -->
+                <text x="257" y="106" font-family="monospace" font-size="6" fill="#ef4444">DENY</text>
+                <!-- keypad buttons -->
+                <circle cx="254" cy="114" r="2.5" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.5"/>
+                <circle cx="262" cy="114" r="2.5" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.5"/>
+                <circle cx="270" cy="114" r="2.5" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.5"/>
+                <circle cx="254" cy="121" r="2.5" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.5"/>
+                <circle cx="262" cy="121" r="2.5" fill="#1f8ef1" opacity="0.8"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.6s" repeatCount="indefinite" begin="2s"/></circle>
+                <circle cx="270" cy="121" r="2.5" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.5"/>
+                <circle cx="254" cy="128" r="2.5" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.5"/>
+                <circle cx="262" cy="128" r="2.5" fill="#1a3a55" stroke="#1f8ef1" stroke-width="0.5"/>
+                <circle cx="270" cy="128" r="2.5" fill="#1f8ef1" opacity="0.8"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="0.6s" repeatCount="indefinite" begin="2.3s"/></circle>
+
+                <!-- Lock icon center door -->
+                <rect x="192" y="138" width="16" height="13" rx="2" fill="#ef4444" opacity="0.9"/>
+                <path d="M195 138 Q196 131 200 131 Q204 131 205 138" fill="none" stroke="#ef4444" stroke-width="2"/>
+                <circle cx="200" cy="143" r="2.5" fill="white" opacity="0.9"/>
+                <line x1="200" y1="143" x2="200" y2="148" stroke="white" stroke-width="1.5"/>
+
+                <!-- ACCESS DENIED bar -->
+                <rect x="155" y="156" width="90" height="14" rx="0" fill="#ef4444" opacity="0">
+                  <animate attributeName="opacity" values="0;0;0.9;0.9;0.9;0" dur="4s" repeatCount="indefinite" begin="1s"/>
+                </rect>
+                <text x="200" y="166" font-family="monospace" font-size="7.5" fill="white" text-anchor="middle" opacity="0">
+                  ACCESS DENIED
+                  <animate attributeName="opacity" values="0;0;1;1;1;0" dur="4s" repeatCount="indefinite" begin="1s"/>
+                </text>
+
+                <!-- Concentric scan rings on door -->
+                <ellipse cx="200" cy="110" rx="30" ry="30" fill="none" stroke="#1f8ef1" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.3">
+                  <animateTransform attributeName="transform" type="rotate" from="0 200 110" to="360 200 110" dur="8s" repeatCount="indefinite"/>
+                </ellipse>
+                <ellipse cx="200" cy="110" rx="18" ry="18" fill="none" stroke="#1f8ef1" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.5">
+                  <animateTransform attributeName="transform" type="rotate" from="360 200 110" to="0 200 110" dur="5s" repeatCount="indefinite"/>
+                </ellipse>
+
+                <!-- face scan overlay -->
+                <rect x="181" y="70" width="38" height="42" rx="2" fill="none" stroke="#1f8ef1" stroke-width="1" stroke-dasharray="4 3" opacity="0.5">
+                  <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                <!-- corner brackets on face scan -->
+                <path d="M181 76 L181 70 L187 70" fill="none" stroke="#1f8ef1" stroke-width="1.5"/>
+                <path d="M213 76 L213 70 L207 70" fill="none" stroke="#1f8ef1" stroke-width="1.5"/>
+                <path d="M181 106 L181 112 L187 112" fill="none" stroke="#1f8ef1" stroke-width="1.5"/>
+                <path d="M213 106 L213 112 L207 112" fill="none" stroke="#1f8ef1" stroke-width="1.5"/>
+
+                <!-- CCTV -->
+                <rect x="143" y="14" width="16" height="10" rx="2" fill="#1f8ef1" opacity="0.8"/>
+                <circle cx="137" cy="19" r="4" fill="#0a1825" stroke="#1f8ef1" stroke-width="1"/>
+                <circle cx="137" cy="19" r="2" fill="#1f8ef1" opacity="0.4"/>
+                <line x1="143" y1="19" x2="159" y2="19" stroke="#1f5a8a" stroke-width="0.8"/>
+                <line x1="151" y1="24" x2="151" y2="40" stroke="#1f5a8a" stroke-width="0.8"/>
+
+                <!-- HUD -->
+                <text x="12" y="18" font-family="monospace" font-size="8" fill="#1f8ef1" opacity="0.7">CRITICAL_ZONE · ACCESS CTRL</text>
+                <circle cx="8" cy="14" r="3" fill="#ef4444">
+                  <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+                </circle>
+              </svg>
             </div>
             <div class="app-content">
               <div class="app-tag">Security</div>
@@ -363,19 +1883,122 @@
             </div>
           </div>
 
+          <!-- CARD 5: Perimeter Intrusion Detection -->
           <div class="app-card">
             <div class="app-img-wrap">
-              <div class="app-img-placeholder">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <rect x="4" y="4" width="40" height="40" rx="4" stroke="#1f8ef1" stroke-width="1.8" stroke-dasharray="3 2"/>
-                  <rect x="12" y="12" width="24" height="24" rx="2" stroke="#1f8ef1" stroke-width="1.5"/>
-                  <path d="M18 24h12M24 18v12" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round"/>
-                  <circle cx="12" cy="12" r="3" fill="#1f8ef1" opacity="0.6"/>
-                  <circle cx="36" cy="12" r="3" fill="#1f8ef1" opacity="0.6"/>
-                  <circle cx="12" cy="36" r="3" fill="#1f8ef1" opacity="0.6"/>
-                  <circle cx="36" cy="36" r="3" fill="#1f8ef1" opacity="0.6"/>
-                </svg>
-              </div>
+              <svg class="app-anim-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0a1e20"/>
+                    <stop offset="100%" stop-color="#0a2010"/>
+                  </linearGradient>
+                  <radialGradient id="intruderGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ef4444" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#bg5)"/>
+
+                <!-- Night sky stars -->
+                <circle cx="40" cy="20" r="1" fill="white" opacity="0.6"/>
+                <circle cx="90" cy="35" r="0.8" fill="white" opacity="0.5"/>
+                <circle cx="150" cy="15" r="1" fill="white" opacity="0.7"/>
+                <circle cx="230" cy="28" r="0.8" fill="white" opacity="0.4"/>
+                <circle cx="310" cy="18" r="1" fill="white" opacity="0.6"/>
+                <circle cx="370" cy="30" r="0.8" fill="white" opacity="0.5"/>
+                <circle cx="60" cy="50" r="0.7" fill="white" opacity="0.3"/>
+                <circle cx="340" cy="45" r="0.9" fill="white" opacity="0.4"/>
+
+                <!-- Ground / terrain -->
+                <rect x="0" y="145" width="400" height="55" fill="#091a0a" opacity="0.9"/>
+                <path d="M0 145 Q50 138 100 145 Q150 152 200 144 Q250 136 300 145 Q350 154 400 144 L400 200 L0 200Z" fill="#0a200a" opacity="0.8"/>
+
+                <!-- Perimeter fence - full width -->
+                <line x1="20" y1="130" x2="380" y2="130" stroke="#3a5a3a" stroke-width="2"/>
+                <!-- fence posts -->
+                <g stroke="#4a7a4a" stroke-width="1.5">
+                  <line x1="40" y1="110" x2="40" y2="145"/>
+                  <line x1="80" y1="110" x2="80" y2="145"/>
+                  <line x1="120" y1="110" x2="120" y2="145"/>
+                  <line x1="160" y1="110" x2="160" y2="145"/>
+                  <line x1="200" y1="110" x2="200" y2="145"/>
+                  <line x1="240" y1="110" x2="240" y2="145"/>
+                  <line x1="280" y1="110" x2="280" y2="145"/>
+                  <line x1="320" y1="110" x2="320" y2="145"/>
+                  <line x1="360" y1="110" x2="360" y2="145"/>
+                </g>
+                <!-- fence wire -->
+                <line x1="20" y1="115" x2="380" y2="115" stroke="#2a4a2a" stroke-width="1"/>
+                <line x1="20" y1="122" x2="380" y2="122" stroke="#2a4a2a" stroke-width="1"/>
+                <!-- barbed wire top -->
+                <path d="M20 110 Q30 106 40 110 Q50 114 60 110 Q70 106 80 110 Q90 114 100 110 Q110 106 120 110 Q130 114 140 110 Q150 106 160 110 Q170 114 180 110 Q190 106 200 110 Q210 114 220 110 Q230 106 240 110 Q250 114 260 110 Q270 106 280 110 Q290 114 300 110 Q310 106 320 110 Q330 114 340 110 Q350 106 360 110 Q370 114 380 110" fill="none" stroke="#6a8a4a" stroke-width="1"/>
+
+                <!-- Security tower left -->
+                <rect x="18" y="60" width="28" height="75" rx="1" fill="#0f2d20" stroke="#2a5a3a" stroke-width="0.8"/>
+                <rect x="14" y="55" width="36" height="12" rx="1" fill="#163a20" stroke="#2a5a3a" stroke-width="0.8"/>
+                <!-- tower window -->
+                <rect x="24" y="65" width="16" height="12" rx="1" fill="#0a1a10" stroke="#22c55e" stroke-width="0.6"/>
+                <rect x="24" y="65" width="16" height="12" rx="1" fill="#22c55e" opacity="0.08">
+                  <animate attributeName="opacity" values="0.08;0.2;0.08" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                <!-- spotlight beam from tower -->
+                <path d="M32 67 L120 130 L80 130Z" fill="#f59e0b" opacity="0">
+                  <animate attributeName="opacity" values="0;0.06;0.06;0" dur="5s" repeatCount="indefinite" begin="0s"/>
+                </path>
+                <path d="M32 67 L200 110 L160 110Z" fill="#f59e0b" opacity="0">
+                  <animate attributeName="opacity" values="0;0;0.06;0.06;0" dur="5s" repeatCount="indefinite" begin="1s"/>
+                </path>
+
+                <!-- Security tower right -->
+                <rect x="354" y="60" width="28" height="75" rx="1" fill="#0f2d20" stroke="#2a5a3a" stroke-width="0.8"/>
+                <rect x="350" y="55" width="36" height="12" rx="1" fill="#163a20" stroke="#2a5a3a" stroke-width="0.8"/>
+                <rect x="360" y="65" width="16" height="12" rx="1" fill="#0a1a10" stroke="#22c55e" stroke-width="0.6"/>
+                <rect x="360" y="65" width="16" height="12" rx="1" fill="#22c55e" opacity="0.08">
+                  <animate attributeName="opacity" values="0.08;0.2;0.08" dur="2.5s" repeatCount="indefinite" begin="1s"/>
+                </rect>
+
+                <!-- Intruder figure climbing fence - animated -->
+                <g>
+                  <animateTransform attributeName="transform" type="translate" from="0,0" to="0,-30" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1" keyTimes="0;1"/>
+                  <!-- body -->
+                  <rect x="246" y="118" width="14" height="25" rx="2" fill="#1a1a2a"/>
+                  <!-- head -->
+                  <circle cx="253" cy="113" r="7" fill="#2a1a0a"/>
+                  <!-- arms reaching up -->
+                  <line x1="246" y1="126" x2="238" y2="112" stroke="#1a1a2a" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="260" y1="126" x2="268" y2="112" stroke="#1a1a2a" stroke-width="4" stroke-linecap="round"/>
+                  <!-- legs -->
+                  <line x1="249" y1="143" x2="245" y2="158" stroke="#1a1a2a" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="257" y1="143" x2="261" y2="158" stroke="#1a1a2a" stroke-width="4" stroke-linecap="round"/>
+                </g>
+
+                <!-- Intruder detection glow + alert box -->
+                <circle cx="253" cy="130" r="40" fill="url(#intruderGlow)">
+                  <animate attributeName="r" values="40;60;40" dur="2s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <rect x="200" y="100" width="106" height="55" rx="3" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 3">
+                  <animate attributeName="opacity" values="1;0.4;1" dur="1s" repeatCount="indefinite"/>
+                </rect>
+                <!-- INTRUDER DETECTED label -->
+                <rect x="200" y="86" width="106" height="14" rx="3" fill="#ef4444" opacity="0.9"/>
+                <text x="253" y="96" font-family="monospace" font-size="7.5" fill="white" text-anchor="middle">⚠ INTRUDER DETECTED</text>
+
+                <!-- Camera on pole center -->
+                <line x1="200" y1="20" x2="200" y2="100" stroke="#2a4a3a" stroke-width="2"/>
+                <rect x="188" y="12" width="18" height="11" rx="3" fill="#1f8ef1" opacity="0.8"/>
+                <circle cx="184" cy="17" r="4.5" fill="#0a1825" stroke="#1f8ef1" stroke-width="1.2"/>
+                <circle cx="184" cy="17" r="2" fill="#1f8ef1" opacity="0.5"/>
+                <!-- camera scan lines to intruder -->
+                <line x1="184" y1="20" x2="230" y2="130" stroke="#1f8ef1" stroke-width="0.7" stroke-dasharray="4 3" opacity="0.4"/>
+                <line x1="190" y1="22" x2="275" y2="128" stroke="#1f8ef1" stroke-width="0.7" stroke-dasharray="4 3" opacity="0.4"/>
+
+                <!-- HUD -->
+                <text x="12" y="18" font-family="monospace" font-size="8" fill="#22c55e" opacity="0.8">PERIMETER · BREACH ALERT</text>
+                <circle cx="8" cy="14" r="3" fill="#ef4444">
+                  <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+                </circle>
+              </svg>
             </div>
             <div class="app-content">
               <div class="app-tag">Perimeter</div>
@@ -384,16 +2007,151 @@
             </div>
           </div>
 
+          <!-- CARD 6: Remote Infrastructure Monitoring -->
           <div class="app-card">
             <div class="app-img-wrap">
-              <div class="app-img-placeholder">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <path d="M8 36l8-12 6 8 6-10 8 14" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M4 4v40h40" stroke="#1f8ef1" stroke-width="1.8" stroke-linecap="round"/>
-                  <circle cx="38" cy="12" r="6" stroke="#1f8ef1" stroke-width="1.5"/>
-                  <path d="M36 10l4 4M40 10l-4 4" stroke="#ff4444" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
+              <svg class="app-anim-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bg6" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0a1030"/>
+                    <stop offset="100%" stop-color="#08101a"/>
+                  </linearGradient>
+                  <linearGradient id="earth6" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0a2015"/>
+                    <stop offset="100%" stop-color="#050f08"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#bg6)"/>
+
+                <!-- Stars -->
+                <circle cx="20" cy="12" r="0.8" fill="white" opacity="0.7"/>
+                <circle cx="60" cy="28" r="1" fill="white" opacity="0.5"/>
+                <circle cx="110" cy="10" r="0.8" fill="white" opacity="0.6"/>
+                <circle cx="180" cy="20" r="1" fill="white" opacity="0.4"/>
+                <circle cx="250" cy="8" r="0.8" fill="white" opacity="0.7"/>
+                <circle cx="330" cy="22" r="1" fill="white" opacity="0.5"/>
+                <circle cx="385" cy="14" r="0.8" fill="white" opacity="0.6"/>
+                <circle cx="70" cy="45" r="0.7" fill="white" opacity="0.3"/>
+                <circle cx="290" cy="38" r="0.8" fill="white" opacity="0.4"/>
+
+                <!-- Moon -->
+                <circle cx="360" cy="30" r="18" fill="#e8e0c0" opacity="0.15"/>
+                <circle cx="370" cy="24" r="15" fill="#0a1030" opacity="0.8"/>
+
+                <!-- Terrain/horizon -->
+                <path d="M0 150 Q60 130 100 145 Q160 165 220 138 Q280 112 330 145 Q360 162 400 140 L400 200 L0 200Z" fill="url(#earth6)"/>
+                <path d="M0 165 Q80 155 140 162 Q200 170 260 155 Q320 140 400 158 L400 200 L0 200Z" fill="#060e08" opacity="0.7"/>
+
+                <!-- Power substation left -->
+                <g transform="translate(50,105)">
+                  <!-- transformer cylinders -->
+                  <ellipse cx="0" cy="5" rx="12" ry="5" fill="#1a3a20" stroke="#2a6a30" stroke-width="0.8"/>
+                  <rect x="-12" y="5" width="24" height="30" fill="#1a3a20" stroke="#2a6a30" stroke-width="0.8"/>
+                  <ellipse cx="0" cy="35" rx="12" ry="5" fill="#1a3a20" stroke="#2a6a30" stroke-width="0.8"/>
+                  <!-- insulators -->
+                  <line x1="0" y1="0" x2="0" y2="-15" stroke="#cccccc" stroke-width="1.5"/>
+                  <ellipse cx="0" cy="-15" rx="4" ry="2" fill="#cccccc" opacity="0.6"/>
+                  <ellipse cx="0" cy="-19" rx="3" ry="1.5" fill="#cccccc" opacity="0.6"/>
+                  <!-- power lines going right -->
+                  <line x1="0" y1="-15" x2="120" y2="-30" stroke="#888" stroke-width="0.8"/>
+                  <!-- status light -->
+                  <circle cx="8" cy="18" r="3" fill="#22c55e">
+                    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+                  </circle>
+                </g>
+
+                <!-- Power substation right -->
+                <g transform="translate(310,108)">
+                  <ellipse cx="0" cy="5" rx="12" ry="5" fill="#1a3a20" stroke="#2a6a30" stroke-width="0.8"/>
+                  <rect x="-12" y="5" width="24" height="28" fill="#1a3a20" stroke="#2a6a30" stroke-width="0.8"/>
+                  <ellipse cx="0" cy="33" rx="12" ry="5" fill="#1a3a20" stroke="#2a6a30" stroke-width="0.8"/>
+                  <line x1="0" y1="0" x2="0" y2="-14" stroke="#cccccc" stroke-width="1.5"/>
+                  <ellipse cx="0" cy="-14" rx="4" ry="2" fill="#cccccc" opacity="0.6"/>
+                  <line x1="0" y1="-14" x2="-120" y2="-28" stroke="#888" stroke-width="0.8"/>
+                  <circle cx="8" cy="18" r="3" fill="#22c55e">
+                    <animate attributeName="opacity" values="1;0.3;1" dur="2.3s" repeatCount="indefinite" begin="0.5s"/>
+                  </circle>
+                </g>
+
+                <!-- Power lines sagging across scene -->
+                <path d="M50 90 Q130 100 200 90 Q270 80 360 93" fill="none" stroke="#555" stroke-width="0.8"/>
+                <path d="M50 95 Q130 105 200 95 Q270 85 360 98" fill="none" stroke="#555" stroke-width="0.8"/>
+
+                <!-- Transmission tower center -->
+                <g transform="translate(200,40)">
+                  <!-- lattice tower -->
+                  <line x1="-20" y1="100" x2="0" y2="0" stroke="#4a6a7a" stroke-width="1.5"/>
+                  <line x1="20" y1="100" x2="0" y2="0" stroke="#4a6a7a" stroke-width="1.5"/>
+                  <line x1="-15" y1="75" x2="15" y2="75" stroke="#4a6a7a" stroke-width="1"/>
+                  <line x1="-12" y1="55" x2="12" y2="55" stroke="#4a6a7a" stroke-width="1"/>
+                  <line x1="-8" y1="35" x2="8" y2="35" stroke="#4a6a7a" stroke-width="1"/>
+                  <!-- cross braces -->
+                  <line x1="-20" y1="100" x2="-12" y2="55" stroke="#3a5a6a" stroke-width="0.8"/>
+                  <line x1="20" y1="100" x2="12" y2="55" stroke="#3a5a6a" stroke-width="0.8"/>
+                  <line x1="-12" y1="55" x2="-8" y2="35" stroke="#3a5a6a" stroke-width="0.8"/>
+                  <line x1="12" y1="55" x2="8" y2="35" stroke="#3a5a6a" stroke-width="0.8"/>
+                  <!-- crossarm -->
+                  <line x1="-30" y1="15" x2="30" y2="15" stroke="#4a6a7a" stroke-width="1.5"/>
+                  <line x1="-20" y1="20" x2="20" y2="20" stroke="#4a6a7a" stroke-width="1"/>
+                  <!-- insulator points -->
+                  <circle cx="-30" cy="15" r="2" fill="#cccccc" opacity="0.6"/>
+                  <circle cx="0" cy="0" r="2" fill="#cccccc" opacity="0.6"/>
+                  <circle cx="30" cy="15" r="2" fill="#cccccc" opacity="0.6"/>
+                  <!-- warning light top -->
+                  <circle cx="0" cy="-5" r="3" fill="#ef4444" opacity="0.8">
+                    <animate attributeName="opacity" values="0.8;0.1;0.8" dur="1.5s" repeatCount="indefinite"/>
+                  </circle>
+                </g>
+
+                <!-- Satellite dish -->
+                <g transform="translate(340,75)">
+                  <ellipse cx="0" cy="0" rx="20" ry="8" fill="none" stroke="#1f8ef1" stroke-width="1.5" transform="rotate(-30)"/>
+                  <ellipse cx="0" cy="0" rx="15" ry="6" fill="#0a2035" stroke="#1f8ef1" stroke-width="0.8" opacity="0.6" transform="rotate(-30)"/>
+                  <line x1="0" y1="0" x2="10" y2="25" stroke="#1f5a8a" stroke-width="1.5"/>
+                  <rect x="5" y="23" width="10" height="6" rx="1" fill="#0f2d44"/>
+                  <!-- signal arcs -->
+                  <path d="M-5,-8 Q-15,-20 -5,-32" fill="none" stroke="#1f8ef1" stroke-width="1.2" opacity="0" stroke-dasharray="3 2">
+                    <animate attributeName="opacity" values="0;0.8;0;0.8;0" dur="3s" repeatCount="indefinite" begin="0s"/>
+                  </path>
+                  <path d="M-10,-5 Q-26,-22 -10,-40" fill="none" stroke="#1f8ef1" stroke-width="1" opacity="0" stroke-dasharray="3 2">
+                    <animate attributeName="opacity" values="0;0;0.6;0;0.6;0" dur="3s" repeatCount="indefinite" begin="0.4s"/>
+                  </path>
+                  <path d="M-15,-2 Q-36,-24 -16,-48" fill="none" stroke="#1f8ef1" stroke-width="0.8" opacity="0" stroke-dasharray="3 2">
+                    <animate attributeName="opacity" values="0;0;0;0.4;0;0.4;0" dur="3s" repeatCount="indefinite" begin="0.8s"/>
+                  </path>
+                </g>
+
+                <!-- Signal data pulses along power lines -->
+                <circle cx="0" cy="0" r="3" fill="#1f8ef1" opacity="0.8">
+                  <animateMotion path="M50,90 Q130,100 200,90 Q270,80 360,93" dur="4s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.8;0.4;0.8" dur="0.5s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="0" cy="0" r="3" fill="#22c55e" opacity="0.8">
+                  <animateMotion path="M360,93 Q270,80 200,90 Q130,100 50,90" dur="5s" repeatCount="indefinite" begin="2s"/>
+                  <animate attributeName="opacity" values="0.8;0.4;0.8" dur="0.5s" repeatCount="indefinite"/>
+                </circle>
+
+                <!-- Remote monitoring dashboard top-left -->
+                <rect x="10" y="28" width="90" height="55" rx="3" fill="#0a1825" stroke="#1f8ef1" stroke-width="0.8" opacity="0.9"/>
+                <rect x="13" y="31" width="84" height="6" rx="1" fill="#1a3a55" opacity="0.8"/>
+                <text x="16" y="36" font-family="monospace" font-size="5" fill="#1f8ef1" opacity="0.9">REMOTE MONITOR</text>
+                <!-- mini charts -->
+                <polyline points="14,50 22,44 30,47 38,41 46,45 54,39 62,43 70,38" fill="none" stroke="#22c55e" stroke-width="1"/>
+                <polyline points="14,62 22,58 30,64 38,56 46,60 54,55 62,59 70,54" fill="none" stroke="#1f8ef1" stroke-width="1"/>
+                <!-- site labels -->
+                <circle cx="16" cy="72" r="2.5" fill="#22c55e" opacity="0.8"/>
+                <text x="21" y="75" font-family="monospace" font-size="5" fill="#aaa">SITE_01 OK</text>
+                <circle cx="52" cy="72" r="2.5" fill="#22c55e" opacity="0.8"/>
+                <text x="57" y="75" font-family="monospace" font-size="5" fill="#aaa">SITE_02 OK</text>
+                <circle cx="16" cy="79" r="2.5" fill="#f59e0b" opacity="0.9"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.5s" repeatCount="indefinite"/></circle>
+                <text x="21" y="82" font-family="monospace" font-size="5" fill="#f59e0b">SITE_03 CHK</text>
+
+                <!-- HUD -->
+                <text x="108" y="18" font-family="monospace" font-size="8" fill="#1f8ef1" opacity="0.7">REMOTE_INFRA · 12 SITES</text>
+                <circle cx="104" cy="14" r="3" fill="#22c55e">
+                  <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+                </circle>
+              </svg>
             </div>
             <div class="app-content">
               <div class="app-tag">Remote</div>
@@ -402,16 +2160,7 @@
             </div>
           </div>
 
-        </div>
-      </div>
-
-      <button class="app-arrow app-arrow-right" id="appNext">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
     </div>
-    <div class="app-dots" id="appDots"></div>
   </div>
 </section>
 
@@ -504,6 +2253,160 @@
   </div>
 </section>
 
+<!-- ================= CASE STUDIES ================= -->
+<section id="case-studies" class="section light">
+  <div class="container">
+    <div class="section-label">Case Studies</div>
+    <h2>Proven in the Field</h2>
+    <p class="cs-intro">Real deployments. Measurable outcomes. Industries that can't afford to wait.</p>
+
+    <div class="cs-grid">
+
+      <!-- Case 1 -->
+      <div class="cs-card">
+        <div class="cs-header">
+          <div class="cs-industry-badge">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <rect x="1" y="5" width="12" height="8" rx="1" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M3 5V3.5C3 2.1 4.1 1 5.5 1h3C9.9 1 11 2.1 11 3.5V5" stroke="currentColor" stroke-width="1.3"/>
+            </svg>
+            Manufacturing
+          </div>
+          <div class="cs-location">Pune, Maharashtra</div>
+        </div>
+        <h3>Auto-Parts Manufacturing Plant</h3>
+        <p class="cs-challenge"><span class="cs-label">Challenge</span> A 3-shift facility with 240+ workers struggled to enforce PPE compliance and detect machine-idle incidents across 18 production zones with only 4 supervisors per shift.</p>
+        <p class="cs-solution"><span class="cs-label">Solution</span> Parvekshak deployed across 32 cameras with PPE detection, zone-entry rules, and unattended-machine alerts — all processed on a single on-premise edge server.</p>
+        <div class="cs-stats">
+          <div class="cs-stat">
+            <div class="cs-stat-num">73<span>%</span></div>
+            <div class="cs-stat-desc">Reduction in PPE violations within 60 days</div>
+          </div>
+          <div class="cs-stat">
+            <div class="cs-stat-num">4×</div>
+            <div class="cs-stat-desc">Faster incident response vs. manual monitoring</div>
+          </div>
+          <div class="cs-stat">
+            <div class="cs-stat-num">₹0</div>
+            <div class="cs-stat-desc">Cloud infrastructure cost</div>
+          </div>
+        </div>
+        <div class="cs-testimonial">
+          <div class="cs-avatar">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+              <circle cx="28" cy="28" r="28" fill="#163348"/>
+              <!-- shirt -->
+              <ellipse cx="28" cy="50" rx="16" ry="10" fill="#1e4d7a"/>
+              <!-- neck -->
+              <rect x="24" y="32" width="8" height="8" rx="2" fill="#c8956a"/>
+              <!-- head -->
+              <circle cx="28" cy="22" r="10" fill="#c8956a"/>
+              <!-- hair -->
+              <path d="M18 20 Q18 10 28 10 Q38 10 38 20 Q36 14 28 14 Q20 14 18 20Z" fill="#3a2010"/>
+              <!-- ears -->
+              <ellipse cx="18" cy="22" rx="2" ry="2.5" fill="#b8845a"/>
+              <ellipse cx="38" cy="22" rx="2" ry="2.5" fill="#b8845a"/>
+              <!-- eyes -->
+              <ellipse cx="24" cy="21" rx="1.5" ry="1.8" fill="#2a1800"/>
+              <ellipse cx="32" cy="21" rx="1.5" ry="1.8" fill="#2a1800"/>
+              <!-- brows -->
+              <path d="M22 18.5 Q24 17.5 26 18.5" stroke="#3a2010" stroke-width="1" fill="none"/>
+              <path d="M30 18.5 Q32 17.5 34 18.5" stroke="#3a2010" stroke-width="1" fill="none"/>
+              <!-- smile -->
+              <path d="M24 26 Q28 29 32 26" stroke="#a06040" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="cs-testimonial-body">
+            <svg class="cs-quote-mark" width="22" height="17" viewBox="0 0 22 17" fill="none">
+              <path d="M0 17V10.2C0 4.533 2.833 1.133 8.5 0l1.7 2.55C7.133 3.4 5.417 5.1 5.1 7.65H8.5V17H0ZM13.5 17V10.2C13.5 4.533 16.333 1.133 22 0l1.7 2.55C20.633 3.4 18.917 5.1 18.6 7.65H22V17H13.5Z" fill="#1f8ef1" opacity="0.18"/>
+            </svg>
+            <p class="cs-review">"We replaced three manual monitoring stations. The system caught a forklift near-miss we would have missed entirely — it paid for itself within the first month."</p>
+            <div class="cs-person">
+              <div class="cs-stars">★★★★★</div>
+              <span class="cs-name">Arvind Kulkarni</span>
+              <span class="cs-designation">Plant Safety Manager · Precision Auto Parts Ltd., Pune</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="cs-card">
+        <div class="cs-header">
+          <div class="cs-industry-badge">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M7 1L13 5v4L7 13 1 9V5L7 1Z" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.3"/>
+            </svg>
+            Warehousing
+          </div>
+          <div class="cs-location">Bhiwandi, Maharashtra</div>
+        </div>
+        <h3>Large-Scale 3PL Warehouse</h3>
+        <p class="cs-challenge"><span class="cs-label">Challenge</span> A 180,000 sq. ft. third-party logistics warehouse experienced recurring inventory discrepancies and unauthorized access to high-value goods zones during night shifts.</p>
+        <p class="cs-solution"><span class="cs-label">Solution</span> Perimeter zoning, after-hours motion logic, and behaviour anomaly detection deployed across 48 cameras with WhatsApp alert integration for the security team.</p>
+        <div class="cs-stats">
+          <div class="cs-stat">
+            <div class="cs-stat-num">91<span>%</span></div>
+            <div class="cs-stat-desc">Drop in unauthorized zone access events</div>
+          </div>
+          <div class="cs-stat">
+            <div class="cs-stat-num">2 min</div>
+            <div class="cs-stat-desc">Average alert-to-response time (was 22 min)</div>
+          </div>
+          <div class="cs-stat">
+            <div class="cs-stat-num">₹18L</div>
+            <div class="cs-stat-desc">Estimated annual shrinkage reduction</div>
+          </div>
+        </div>
+        <div class="cs-testimonial">
+          <div class="cs-avatar">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+              <circle cx="28" cy="28" r="28" fill="#163348"/>
+              <!-- shirt -->
+              <ellipse cx="28" cy="50" rx="16" ry="10" fill="#7b3f8a"/>
+              <!-- neck -->
+              <rect x="24" y="32" width="8" height="8" rx="2" fill="#d4a274"/>
+              <!-- head -->
+              <circle cx="28" cy="22" r="10" fill="#d4a274"/>
+              <!-- hair - longer for female -->
+              <path d="M18 22 Q17 10 28 9 Q39 10 38 22 Q38 16 34 13 Q28 10 22 13 Q18 16 18 22Z" fill="#1a0a00"/>
+              <path d="M17 22 Q15 30 17 36 Q19 32 19 26Z" fill="#1a0a00"/>
+              <path d="M39 22 Q41 30 39 36 Q37 32 37 26Z" fill="#1a0a00"/>
+              <!-- ears -->
+              <ellipse cx="18" cy="22" rx="2" ry="2.5" fill="#c49264"/>
+              <ellipse cx="38" cy="22" rx="2" ry="2.5" fill="#c49264"/>
+              <!-- eyes -->
+              <ellipse cx="24" cy="21" rx="1.6" ry="1.9" fill="#1a0a00"/>
+              <ellipse cx="32" cy="21" rx="1.6" ry="1.9" fill="#1a0a00"/>
+              <!-- lashes -->
+              <path d="M22 19.5 Q24 18 26 19.5" stroke="#1a0a00" stroke-width="1.2" fill="none"/>
+              <path d="M30 19.5 Q32 18 34 19.5" stroke="#1a0a00" stroke-width="1.2" fill="none"/>
+              <!-- smile -->
+              <path d="M24 26 Q28 29.5 32 26" stroke="#b07840" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              <!-- earrings -->
+              <circle cx="17.5" cy="25" r="1.2" fill="#f0c030"/>
+              <circle cx="38.5" cy="25" r="1.2" fill="#f0c030"/>
+            </svg>
+          </div>
+          <div class="cs-testimonial-body">
+            <svg class="cs-quote-mark" width="22" height="17" viewBox="0 0 22 17" fill="none">
+              <path d="M0 17V10.2C0 4.533 2.833 1.133 8.5 0l1.7 2.55C7.133 3.4 5.417 5.1 5.1 7.65H8.5V17H0ZM13.5 17V10.2C13.5 4.533 16.333 1.133 22 0l1.7 2.55C20.633 3.4 18.917 5.1 18.6 7.65H22V17H13.5Z" fill="#1f8ef1" opacity="0.18"/>
+            </svg>
+            <p class="cs-review">"Night-shift theft had become a serious recurring problem. After Parvekshak, our insurance provider also revised our premium favourably — an unexpected bonus on top of everything."</p>
+            <div class="cs-person">
+              <div class="cs-stars">★★★★★</div>
+              <span class="cs-name">Meenakshi Iyer</span>
+              <span class="cs-designation">VP Operations · SwiftMove Logistics Pvt. Ltd., Bhiwandi</span>
+            </div>
+          </div>
+        </div>
+      </div>     
+
+    </div>
+  </div>
+</section>
+
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section">
   <div class="container">
@@ -512,7 +2415,7 @@
       <h2>Contact Us</h2>
       <p class="center">Ready to transform your surveillance infrastructure? Reach out.</p>
       <div class="contact-cards">
-        <a href="mailto:contact@parvekshak.com" class="contact-card">
+        <a href="/cdn-cgi/l/email-protection#52313d3c2633312612223320243739213a33397c313d3f" class="contact-card">
           <div class="contact-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <rect x="2" y="4" width="20" height="16" rx="2" stroke="#1f8ef1" stroke-width="1.8"/>
@@ -520,7 +2423,7 @@
             </svg>
           </div>
           <div class="contact-label">Email</div>
-          <div class="contact-value">contact@parvekshak.com</div>
+          <div class="contact-value"><span class="__cf_email__" data-cfemail="82e1edecf6e3e1f6c2f2e3f0f4e7e9f1eae3e9ace1edef">[email&#160;protected]</span></div>
         </a>
         <a href="https://wa.me/918800193337" target="_blank" class="contact-card">
           <div class="contact-icon">
@@ -557,7 +2460,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Hero Carousel
 const heroTrack = document.querySelector('.carousel-track');
 const heroDots = document.querySelectorAll('.dot');
@@ -573,51 +2476,3 @@ function goHero(idx) {
 
 heroDots.forEach(d => d.addEventListener('click', () => goHero(+d.dataset.idx)));
 setInterval(() => goHero(heroIndex + 1), 4000);
-
-// Applications Carousel
-const appTrack = document.getElementById('appTrack');
-const appCards = appTrack.querySelectorAll('.app-card');
-const appDotsWrap = document.getElementById('appDots');
-const appPrev = document.getElementById('appPrev');
-const appNext = document.getElementById('appNext');
-
-let appIndex = 0;
-let visibleCards = 3;
-
-function getVisible() {
-  return window.innerWidth < 700 ? 1 : window.innerWidth < 1000 ? 2 : 3;
-}
-
-function buildAppDots() {
-  visibleCards = getVisible();
-  const pages = Math.ceil(appCards.length / visibleCards);
-  appDotsWrap.innerHTML = '';
-  for (let i = 0; i < pages; i++) {
-    const d = document.createElement('button');
-    d.className = 'app-dot' + (i === 0 ? ' active' : '');
-    d.addEventListener('click', () => goApp(i));
-    appDotsWrap.appendChild(d);
-  }
-}
-
-function goApp(idx) {
-  visibleCards = getVisible();
-  const pages = Math.ceil(appCards.length / visibleCards);
-  appIndex = (idx + pages) % pages;
-  const cardWidth = appCards[0].offsetWidth + 24;
-  appTrack.style.transform = `translateX(-${appIndex * visibleCards * cardWidth}px)`;
-  document.querySelectorAll('.app-dot').forEach((d, i) => d.classList.toggle('active', i === appIndex));
-}
-
-appPrev.addEventListener('click', () => goApp(appIndex - 1));
-appNext.addEventListener('click', () => goApp(appIndex + 1));
-
-let appTimer = setInterval(() => goApp(appIndex + 1), 5000);
-appTrack.addEventListener('mouseenter', () => clearInterval(appTimer));
-appTrack.addEventListener('mouseleave', () => { appTimer = setInterval(() => goApp(appIndex + 1), 5000); });
-
-buildAppDots();
-window.addEventListener('resize', () => { buildAppDots(); goApp(0); });
-</script>
-</body>
-</html>
