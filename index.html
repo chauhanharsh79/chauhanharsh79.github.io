@@ -9,6 +9,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Parvekshak",
+    "description": "Parvekshak is a local AI-powered surveillance system that adds intelligence to CCTV cameras. No cloud. No internet. Privacy-first.",
+    "url": "https://www.parvekshak.com",
+    "logo": "https://www.parvekshak.com/favicon.svg",
+    "email": "contact@parvekshak.com",
+    "telephone": "+91-9871911778",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "G-272, Sector-63",
+      "addressLocality": "Noida",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "201301",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 28.6209,
+      "longitude": 77.3740
+    },
+    "sameAs": [
+      "https://wa.me/919871911778"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "telephone": "+91-9871911778",
+      "email": "contact@parvekshak.com",
+      "availableLanguage": ["English", "Hindi"]
+    }
+  }
+  </script>
   <style>
 /* =============================================
    PARVEKSHAK — Production CSS
@@ -1215,6 +1250,112 @@ nav a:hover {
   .how-step { margin: 0; }
 }
 
+/* ── ENQUIRY FORM ── */
+#enquiry { background: #f6f8fa; }
+.enquiry-wrap { max-width: 680px; margin: 0 auto; text-align: center; }
+.enquiry-wrap h2 { margin-bottom: 8px; }
+.enquiry-wrap > p { color: #555; margin-bottom: 36px; }
+
+.enquiry-form {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 40px 44px;
+  text-align: left;
+  box-shadow: 0 4px 24px rgba(11,28,45,0.07);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: 1.5px solid #dde2ea;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: 'Barlow', Arial, sans-serif;
+  font-size: 15px;
+  color: #111;
+  background: #fafbfc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #1f8ef1;
+  box-shadow: 0 0 0 3px rgba(31,142,241,0.12);
+  background: #fff;
+}
+
+.form-group textarea { min-height: 110px; }
+
+.enquiry-submit {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.form-consent input[type="checkbox"] {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: #1f8ef1;
+  cursor: pointer;
+}
+
+.form-consent a {
+  color: #1f8ef1;
+  text-decoration: underline;
+}
+
+.enquiry-success {
+  display: none;
+  background: #e6f4ea;
+  border: 1px solid #b7dfbe;
+  border-radius: 8px;
+  padding: 14px 20px;
+  color: #1a6e31;
+  font-weight: 600;
+  margin-top: 18px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .enquiry-form { padding: 28px 20px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}
+
   </style>
 </head>
 
@@ -1247,6 +1388,7 @@ nav a:hover {
       <a href="#applications">Business</a>
       <a href="#case-studies">Case Studies</a>
       <a href="#installers">Integrators</a>
+      <a href="#enquiry">Enquiry</a>
       <a href="#contact" class="btn small">Contact Us</a>
     </nav>
   </div>
@@ -3002,6 +3144,66 @@ nav a:hover {
   </div>
 </section>
 
+<!-- ================= ENQUIRY ================= -->
+<section id="enquiry" class="section">
+  <div class="container">
+    <div class="enquiry-wrap">
+      <div class="section-label">Send an Enquiry</div>
+      <h2>Get a Free Consultation</h2>
+      <p>Tell us about your security requirements and our team will get back to you within one business day.</p>
+      <div class="enquiry-form">
+        <form id="enquiryForm" action="https://formspree.io/f/mwvydvlg" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="eq-name">Full Name *</label>
+              <input type="text" id="eq-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="eq-company">Company / Organisation</label>
+              <input type="text" id="eq-company" name="company" placeholder="Company name (optional)" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="eq-email">Email Address *</label>
+              <input type="email" id="eq-email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="eq-phone">Phone / WhatsApp</label>
+              <input type="tel" id="eq-phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="eq-type">Type of Enquiry</label>
+            <select id="eq-type" name="enquiry_type">
+              <option value="">— Select —</option>
+              <option value="Industrial / Factory">Industrial / Factory</option>
+              <option value="Residential / Home">Residential / Home</option>
+              <option value="Retail / Commercial">Retail / Commercial</option>
+              <option value="System Integrator / Reseller">System Integrator / Reseller</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="eq-message">Your Message *</label>
+            <textarea id="eq-message" name="message" placeholder="Describe your security requirements, number of cameras, site details, or any questions…" required></textarea>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="eq-consent" name="consent" required />
+            <label for="eq-consent">
+              I agree that Parvekshak may collect and use the information submitted above to respond to my enquiry, in accordance with its <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+            </label>
+          </div>
+          <button type="submit" class="btn enquiry-submit">Send Enquiry</button>
+          <div class="enquiry-success" id="enquirySuccess">
+            ✓ Thank you! Your enquiry has been sent. We'll be in touch shortly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section">
   <div class="container">
@@ -3020,7 +3222,7 @@ nav a:hover {
           <div class="contact-label">Email</div>
           <div class="contact-value">contact@parvekshak.com</div>
         </a>
-        <a href="https://wa.me/919667190565" target="_blank" class="contact-card">
+        <a href="https://wa.me/919871911778" target="_blank" class="contact-card">
           <div class="contact-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.114 1.04 4.46L2 22l5.54-1.04A9.958 9.958 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" stroke="#1f8ef1" stroke-width="1.8"/>
@@ -3028,7 +3230,7 @@ nav a:hover {
             </svg>
           </div>
           <div class="contact-label">WhatsApp</div>
-          <div class="contact-value">+91-9667190565</div>
+          <div class="contact-value">+91-9871911778</div>
         </a>
         <a href="https://maps.google.com/?q=G-272+Sector+63+Noida" target="_blank" class="contact-card">
           <div class="contact-icon">
@@ -3051,7 +3253,7 @@ nav a:hover {
       <span class="logo-main">PARVEKSHAK</span>
       <span class="logo-sub">AI Surveillance</span>
     </div>
-    <p>© 2025 Parvekshak. Industrial Vision Intelligence.</p>
+    <p>© 2026 Parvekshak. Industrial Vision Intelligence. &nbsp;·&nbsp; <a href="privacy-policy.html" style="color:rgba(255,255,255,0.45);text-decoration:none;">Privacy Policy</a></p>
   </div>
 </footer>
 
@@ -3071,3 +3273,46 @@ function goHero(idx) {
 
 heroDots.forEach(d => d.addEventListener('click', () => goHero(+d.dataset.idx)));
 setInterval(() => goHero(heroIndex + 1), 4000);
+
+// Enquiry Form → Formspree
+document.getElementById('enquiryForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name    = document.getElementById('eq-name').value.trim();
+  const email   = document.getElementById('eq-email').value.trim();
+  const message = document.getElementById('eq-message').value.trim();
+
+  const consent = document.getElementById('eq-consent').checked;
+  if (!name || !email || !message) {
+    alert('Please fill in Name, Email, and Message fields.');
+    return;
+  }
+  if (!consent) {
+    alert('Please agree to the Privacy Policy before submitting.');
+    return;
+  }
+
+  const btn = this.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  try {
+    const res = await fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('enquirySuccess').style.display = 'block';
+      this.reset();
+      btn.textContent = 'Sent!';
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Send Enquiry';
+      alert('Submission failed. Please try again or email us directly at contact@parvekshak.com');
+    }
+  } catch {
+    btn.disabled = false;
+    btn.textContent = 'Send Enquiry';
+    alert('Network error. Please try again or email us directly at contact@parvekshak.com');
+  }
+});
