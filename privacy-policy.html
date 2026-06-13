@@ -186,17 +186,41 @@
     </ul>
 
     <h2>11.2 Video &amp; Surveillance Data</h2>
-    <p>Live video streams are transmitted directly between your device and your configured surveillance server over an encrypted connection (HTTPS/WSS). Parvekshak does not have access to, store, or process your camera footage on its own servers. You are solely responsible for the lawful use of surveillance equipment and footage in accordance with applicable laws.</p>
+    <p>Live video streams and event snapshots (photos) are transmitted between your device and your configured surveillance server over an encrypted connection (HTTPS/WSS).</p>
+    <p>In certain network configurations — for example, when your surveillance server is behind NAT or a firewall — streams may be relayed through Parvekshak-operated routing infrastructure to establish connectivity. In such cases:</p>
+    <ul>
+      <li>Video and photo data passes through our relay servers in transit only and is <strong>not stored, logged, or retained</strong> by Parvekshak.</li>
+      <li>All data is encrypted in transit and the relay infrastructure cannot decrypt or access the content of the stream.</li>
+      <li>This data is processed <strong>ephemerally</strong> — it exists only in memory for the duration of the active session and is never written to disk.</li>
+    </ul>
+    <p>Parvekshak does not use surveillance footage or snapshots for any purpose beyond facilitating the connection. You are solely responsible for the lawful use of surveillance equipment and footage in accordance with applicable laws.</p>
 
-    <h2>11.3 Account &amp; Authentication Data</h2>
+    <h2>11.3 Relay Server API Logs</h2>
+    <p>When connections are routed through Parvekshak relay infrastructure, our servers automatically generate standard API access logs. These logs may include:</p>
+    <ul>
+      <li>Timestamp of the request</li>
+      <li>API endpoint accessed</li>
+      <li>HTTP response status code</li>
+      <li>Source IP address</li>
+      <li>User or session identifier (derived from the authentication token) used to route the request</li>
+    </ul>
+    <p>These logs are used solely for:</p>
+    <ul>
+      <li>Security monitoring and fraud prevention</li>
+      <li>Diagnosing connectivity issues</li>
+      <li>Maintaining service reliability</li>
+    </ul>
+    <p>API logs are retained for a maximum of 90 days and are then automatically deleted. They are not shared with any third party and are not used for advertising or profiling.</p>
+
+    <h2>11.5 Account &amp; Authentication Data</h2>
     <p>Login credentials (username, password, server address) are stored locally on your device. They are transmitted only to your own server for authentication and are never sent to Parvekshak's servers.</p>
 
-    <h2>11.4 Third-Party SDKs in the App</h2>
+    <h2>11.6 Third-Party SDKs in the App</h2>
     <ul>
       <li><strong>Firebase Cloud Messaging</strong> (Google) — used for push notifications. Subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
     </ul>
 
-    <h2>11.5 Data Not Collected by the App</h2>
+    <h2>11.7 Data Not Collected by the App</h2>
     <p>The App does not collect location data, contacts, microphone audio, device identifiers, or any analytics or usage data.</p>
 
     <h2>12. Contact Us</h2>
