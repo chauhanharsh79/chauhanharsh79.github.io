@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 168" width="960" height="504">
+  <defs>
+    <radialGradient id="fireglow" cx="50%" cy="100%" r="90%">
+      <stop offset="0" stop-color="#ff7a18" stop-opacity="0.55"/><stop offset="1" stop-color="#ff7a18" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="scan2" cx="0%" cy="0%" r="100%">
+      <stop offset="0" stop-color="#1f8ef1" stop-opacity="0.4"/><stop offset="1" stop-color="#1f8ef1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="320" height="168" fill="#1a1410"/>
+  <rect y="142" width="320" height="26" fill="#241a12"/>
+  <ellipse cx="190" cy="150" rx="130" ry="28" fill="url(#fireglow)"/>
+  <!-- camera watching from afar -->
+  <rect x="44" y="44" width="4" height="98" fill="#3a2d20"/>
+  <rect x="34" y="34" width="24" height="12" rx="3" fill="#2a201a" stroke="#ffcaa0" stroke-opacity="0.5"/>
+  <circle cx="58" cy="40" r="3.5" fill="#0a0805" stroke="#ffcaa0"/>
+  <polygon points="58,41 190,142 30,142" fill="url(#scan2)"/>
+  <!-- 2-storey home -->
+  <rect x="150" y="70" width="120" height="72" fill="#2a201a" stroke="#5a4632"/>
+  <polygon points="144,70 276,70 262,48 158,48" fill="#1f1813" stroke="#5a4632"/>
+  <line x1="150" y1="104" x2="270" y2="104" stroke="#5a4632" stroke-opacity="0.7"/>
+  <rect x="166" y="80" width="26" height="20" fill="#0a0805"/>
+  <rect x="210" y="80" width="26" height="20" fill="#0a0805"/>
+  <rect x="166" y="112" width="26" height="22" fill="#0a0805"/>
+  <rect x="226" y="110" width="24" height="32" fill="#0a0805"/>
+  <!-- smoke -->
+  <g fill="#9aa3ab" opacity="0.3">
+    <circle cx="182" cy="44" r="9"/><circle cx="196" cy="32" r="7"/><circle cx="172" cy="30" r="6"/>
+  </g>
+  <!-- flames from upper window -->
+  <path d="M168 100 q-9 -28 13 -44 q-4 19 9 24 q11 -9 6 -24 q17 18 7 44 z" fill="#ff7a18"/>
+  <path d="M180 100 q-5 -18 9 -28 q-2 13 6 15 q5 -6 3 -17 q11 13 4 30 z" fill="#ffd23f"/>
+  <!-- alert toast -->
+  <rect x="206" y="8" width="98" height="24" rx="6" fill="#1a0d08" stroke="#ff7a18" stroke-opacity="0.8"/>
+  <circle cx="220" cy="20" r="6.5" fill="#ff7a18"/>
+  <text x="220" y="23" font-family="Arial" font-size="9" font-weight="700" fill="#fff" text-anchor="middle">!</text>
+  <text x="232" y="23" font-family="Arial" font-size="8.5" font-weight="700" fill="#fff">FIRE ALERT</text>
+</svg>

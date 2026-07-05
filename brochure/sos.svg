@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 168" width="960" height="504">
+  <rect width="320" height="168" fill="#0c1f33"/>
+  <!-- building with 4 rooms (on site) -->
+  <rect x="52" y="46" width="146" height="98" fill="#102a44" stroke="#1f8ef1" stroke-opacity="0.35"/>
+  <line x1="125" y1="46" x2="125" y2="144" stroke="#1f8ef1" stroke-opacity="0.25"/>
+  <line x1="52" y1="95" x2="198" y2="95" stroke="#1f8ef1" stroke-opacity="0.25"/>
+  <!-- signal ring from trigger -->
+  <circle cx="88" cy="116" r="26" fill="none" stroke="#ff4d4d" stroke-width="1.6" stroke-opacity="0.5"/>
+  <!-- in-building receivers (lit) -->
+  <g>
+    <circle cx="80" cy="70" r="5" fill="#0c1f33" stroke="#cfe6ff"/><rect x="75" y="76" width="10" height="14" rx="3" fill="#13314f" stroke="#cfe6ff"/>
+    <rect x="92" y="64" width="11" height="16" rx="2" fill="#ff4d4d"/><text x="97" y="74" font-family="Arial" font-size="7" font-weight="700" fill="#fff" text-anchor="middle">!</text>
+  </g>
+  <g>
+    <circle cx="154" cy="70" r="5" fill="#0c1f33" stroke="#cfe6ff"/><rect x="149" y="76" width="10" height="14" rx="3" fill="#13314f" stroke="#cfe6ff"/>
+    <rect x="166" y="64" width="11" height="16" rx="2" fill="#ff4d4d"/><text x="171" y="74" font-family="Arial" font-size="7" font-weight="700" fill="#fff" text-anchor="middle">!</text>
+  </g>
+  <g>
+    <circle cx="154" cy="120" r="5" fill="#0c1f33" stroke="#cfe6ff"/><rect x="149" y="126" width="10" height="14" rx="3" fill="#13314f" stroke="#cfe6ff"/>
+    <rect x="166" y="114" width="11" height="16" rx="2" fill="#ff4d4d"/><text x="171" y="124" font-family="Arial" font-size="7" font-weight="700" fill="#fff" text-anchor="middle">!</text>
+  </g>
+  <!-- person triggering the SOS -->
+  <text x="92" y="107" font-family="Arial" font-size="8.5" font-weight="700" fill="#ff6b6b" text-anchor="middle">SOS</text>
+  <circle cx="80" cy="120" r="5" fill="#0c1f33" stroke="#ff6b6b" stroke-width="1.4"/>
+  <rect x="75" y="126" width="10" height="14" rx="3" fill="#3a1414" stroke="#ff6b6b"/>
+  <circle cx="95" cy="122" r="5.5" fill="#ff4d4d"/>
+  <!-- signal flowing to remote recipients -->
+  <path d="M198 84 C 224 74, 232 66, 250 60" fill="none" stroke="#ff4d4d" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <path d="M198 108 C 224 116, 232 120, 250 118" fill="none" stroke="#ff4d4d" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <!-- REMOTE people on phones -->
+  <text x="279" y="42" font-family="Arial" font-size="8" font-weight="700" letter-spacing="1" fill="#9fb6cc" text-anchor="middle">REMOTE</text>
+  <g>
+    <rect x="256" y="58" width="34" height="50" rx="5" fill="#0a1a2c" stroke="#1f8ef1" stroke-opacity="0.5"/>
+    <rect x="260" y="64" width="26" height="34" fill="#102a44"/>
+    <circle cx="273" cy="76" r="5" fill="#2a4a6a"/><rect x="266" y="82" width="14" height="11" rx="4" fill="#2a4a6a"/>
+    <circle cx="285" cy="64" r="6" fill="#ff4d4d"/><text x="285" y="67" font-family="Arial" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">!</text>
+  </g>
+  <g>
+    <rect x="256" y="110" width="34" height="50" rx="5" fill="#0a1a2c" stroke="#1f8ef1" stroke-opacity="0.5"/>
+    <rect x="260" y="116" width="26" height="34" fill="#102a44"/>
+    <circle cx="273" cy="128" r="5" fill="#2a4a6a"/><rect x="266" y="134" width="14" height="11" rx="4" fill="#2a4a6a"/>
+    <circle cx="285" cy="116" r="6" fill="#ff4d4d"/><text x="285" y="119" font-family="Arial" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">!</text>
+  </g>
+</svg>

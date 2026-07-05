@@ -1,0 +1,1 @@
+const n=document.querySelector("[data-header]"),e=document.querySelector("[data-nav-toggle]"),s=document.querySelector("[data-nav]");e?.addEventListener("click",()=>{const o=s?.classList.toggle("open");e.setAttribute("aria-expanded",o?"true":"false")});const t=()=>n?.classList.toggle("scrolled",window.scrollY>24);t();window.addEventListener("scroll",t,{passive:!0});
